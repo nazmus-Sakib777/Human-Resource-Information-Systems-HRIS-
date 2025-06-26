@@ -1,0 +1,43 @@
+<!-- ✅ Bootstrap Navbar with Icons -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Employee Modules</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/job-left" class="nav-link">
+            <i class="bi bi-person-dash"></i> Job Left
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/employment-type" class="nav-link">
+            <i class="bi bi-briefcase"></i> Employment Type
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/suspend" class="nav-link">
+            <i class="bi bi-exclamation-triangle"></i> Suspend
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/special-employee" class="nav-link">
+            <i class="bi bi-person-check"></i> Special Employee
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/shift-time" class="nav-link">
+            <i class="bi bi-clock-history"></i> Shift Time
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>

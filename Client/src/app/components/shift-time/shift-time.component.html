@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="card shadow p-4 mt-4">
+  <h4 class="mb-3">Shift Time Form</h4>
+  <form [formGroup]="shiftForm" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label>Shift ID</label>
+        <input class="form-control" formControlName="shiftID" />
+      </div>
+      <div class="col-md-4">
+        <label>Shift Name</label>
+        <input class="form-control" formControlName="shiftName" />
+      </div>
+      <div class="col-md-4">
+        <label>Shift Start</label>
+        <input type="date" class="form-control" formControlName="shiftStart" />
+      </div>
+      <div class="col-md-4">
+        <label>Shift End</label>
+        <input type="date" class="form-control" formControlName="shiftEnd" />
+      </div>
+      <div class="col-md-4">
+        <label>Start Date</label>
+        <input type="date" class="form-control" formControlName="startDate" />
+      </div>
+      <div class="col-md-4">
+        <label>End Date</label>
+        <input type="date" class="form-control" formControlName="endDate" />
+      </div>
+      <div class="col-md-4">
+        <label>Lunch Hour (optional)</label>
+        <input type="number" class="form-control" formControlName="consideredLunchHour" />
+      </div>
+      <div class="col-md-4">
+        <label>Break Duration</label>
+        <input type="number" class="form-control" formControlName="breakDuration" />
+      </div>
+      <div class="col-md-4">
+        <label>Employee ID</label>
+        <input class="form-control" formControlName="employeeID" />
+      </div>
+    </div>
+    <div class="mt-3">
+      <button class="btn btn-success" type="submit" [disabled]="shiftForm.invalid">Save</button>
+      <button class="btn btn-secondary ms-2" type="button" (click)="shiftForm.reset()">Clear</button>
+    </div>
+  </form>
+</div>
+
+<div class="card shadow mt-4">
+  <div class="card-body">
+    <input type="text" [(ngModel)]="searchTerm" class="form-control mb-3" placeholder="Search by ID or Name" />
+    <table class="table table-bordered table-hover">
+      <thead class="table-light">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Employee</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filteredShifts()">
+          <td>{{ item.shiftID }}</td>
+          <td>{{ item.shiftName }}</td>
+          <td>{{ item.shiftStart }}</td>
+          <td>{{ item.shiftEnd }}</td>
+          <td>{{ item.employeeID }}</td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary" (click)="edit(item)">Edit</button>
+            <button class="btn btn-sm btn-outline-danger ms-2" (click)="delete(item.shiftID)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

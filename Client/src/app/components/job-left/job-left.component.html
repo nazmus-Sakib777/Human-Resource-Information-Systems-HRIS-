@@ -1,0 +1,95 @@
+<div class="container">
+    <form [formGroup]="jobForm" (ngSubmit)="onSubmit()" class="border p-3 rounded bg-light mt-3">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <label>Job Left ID</label>
+      <input class="form-control" formControlName="jobLeftID" />
+      <div class="text-danger" *ngIf="jobForm.get('jobLeftID')?.touched && jobForm.get('jobLeftID')?.invalid">
+        <small *ngIf="jobForm.get('jobLeftID')?.errors?.['required']">Required.</small>
+        <small *ngIf="jobForm.get('jobLeftID')?.errors?.['maxlength']">Max 50 chars.</small>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <label>Job Left Date</label>
+      <input type="date" class="form-control" formControlName="jobLeftDate" />
+    </div>
+
+    <div class="col-md-4">
+      <label>Job Left Type</label>
+      <input class="form-control" formControlName="jobLeftType" />
+      <div class="text-danger" *ngIf="jobForm.get('jobLeftType')?.touched && jobForm.get('jobLeftType')?.invalid">
+        <small *ngIf="jobForm.get('jobLeftType')?.errors?.['required']">Required.</small>
+        <small *ngIf="jobForm.get('jobLeftType')?.errors?.['maxlength']">Max 50 chars.</small>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <label>Local Area Clearance</label>
+      <input class="form-control" formControlName="localAreaClerance" />
+    </div>
+
+    <div class="col-md-4">
+      <label>Local Area Remarks</label>
+      <input class="form-control" formControlName="localAreaRemarks" />
+    </div>
+
+    <div class="col-md-4">
+      <label>Approved Date</label>
+      <input type="date" class="form-control" formControlName="approvedDate" />
+    </div>
+
+    <div class="col-md-4">
+      <label>Entry User</label>
+      <input class="form-control" formControlName="entryUser" />
+      <div class="text-danger" *ngIf="jobForm.get('entryUser')?.touched && jobForm.get('entryUser')?.invalid">
+        <small *ngIf="jobForm.get('entryUser')?.errors?.['required']">Required.</small>
+        <small *ngIf="jobForm.get('entryUser')?.errors?.['maxlength']">Max 50 chars.</small>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <label>Employee ID</label>
+      <input class="form-control" formControlName="employeeID" />
+      <div class="text-danger" *ngIf="jobForm.get('employeeID')?.touched && jobForm.get('employeeID')?.invalid">
+        <small *ngIf="jobForm.get('employeeID')?.errors?.['required']">Required.</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <button class="btn btn-primary" type="submit" [disabled]="jobForm.invalid">Save</button>
+    <button class="btn btn-warning ms-2" type="button" (click)="jobForm.reset()">Clear</button>
+  </div>
+</form>
+
+<!-- Search and Table -->
+<input type="text" [(ngModel)]="searchTerm" class="form-control mt-4 mb-2" placeholder="Search by ID or Type" />
+
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>JobLeft ID</th>
+      <th>Type</th>
+      <th>Date</th>
+      <th>Clearance</th>
+      <th>Employee</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredJobLefts()">
+      <td>{{ item.jobLeftID }}</td>
+      <td>{{ item.jobLeftType }}</td>
+      <td>{{ item.jobLeftDate }}</td>
+      <td>{{ item.localAreaClerance }}</td>
+      <td>{{ item.employeeID }}</td>
+      <td>
+        <button class="btn btn-sm btn-info" (click)="edit(item)">Edit</button>
+        <button class="btn btn-sm btn-danger ms-2" (click)="delete(item.jobLeftID)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

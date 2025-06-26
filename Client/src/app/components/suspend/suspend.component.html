@@ -1,0 +1,78 @@
+<form [formGroup]="suspendForm" (ngSubmit)="onSubmit()" class="border p-3 rounded bg-light mt-3">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <label>Suspend ID</label>
+      <input class="form-control" formControlName="suspendID" />
+    </div>
+    <div class="col-md-4">
+      <label>Employee ID</label>
+      <input class="form-control" formControlName="employeeID" />
+    </div>
+    <div class="col-md-4">
+      <label>Employee Name</label>
+      <input class="form-control" formControlName="employeeName" />
+    </div>
+    <div class="col-md-4">
+      <label>Entry Date</label>
+      <input type="date" class="form-control" formControlName="entryDate" />
+    </div>
+    <div class="col-md-4">
+      <label>Suspend Date</label>
+      <input type="date" class="form-control" formControlName="suspendDate" />
+    </div>
+    <div class="col-md-4">
+      <label>Local Area Clearance</label>
+      <input class="form-control" formControlName="localAreaClerance" />
+    </div>
+    <div class="col-md-4">
+      <label>Release</label>
+      <input class="form-control" formControlName="release" />
+    </div>
+    <div class="col-md-4">
+      <label>Remarks</label>
+      <input class="form-control" formControlName="remarks" />
+    </div>
+    <div class="col-md-4">
+      <label>Approved Date</label>
+      <input type="date" class="form-control" formControlName="approvedDate" />
+    </div>
+    <div class="col-md-4">
+      <label>Released Date</label>
+      <input type="date" class="form-control" formControlName="releasedDate" />
+    </div>
+    <div class="col-md-4">
+      <label>Entry User</label>
+      <input class="form-control" formControlName="entryUser" />
+    </div>
+  </div>
+  <div class="mt-3">
+    <button class="btn btn-primary" type="submit" [disabled]="suspendForm.invalid">Save</button>
+    <button class="btn btn-warning ms-2" type="button" (click)="suspendForm.reset()">Clear</button>
+  </div>
+</form>
+
+<input type="text" [(ngModel)]="searchTerm" class="form-control mt-4 mb-2" placeholder="Search by ID or Name" />
+
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Suspend ID</th>
+      <th>Employee Name</th>
+      <th>Entry Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredSuspends()">
+      <td>{{ item.suspendID }}</td>
+      <td>{{ item.employeeName }}</td>
+      <td>{{ item.entryDate }}</td>
+      <td>{{ item.localAreaClerance }}</td>
+      <td>
+        <button class="btn btn-sm btn-info" (click)="edit(item)">Edit</button>
+        <button class="btn btn-sm btn-danger ms-2" (click)="delete(item.suspendID)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

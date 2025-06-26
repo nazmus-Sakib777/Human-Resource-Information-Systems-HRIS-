@@ -1,0 +1,116 @@
+<div class="container mt-5">
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h3 class="text-primary">
+      <i class="bi bi-briefcase-fill"></i> Employment Types
+    </h3>
+    <div class="w-25">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="🔍 Search by ID or Name"
+        [(ngModel)]="searchTerm"
+      />
+    </div>
+  </div>
+
+  <!-- Form Card -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-header bg-primary text-white">
+      {{ selectedId ? 'Update Employment Type' : 'Add Employment Type' }}
+    </div>
+    <div class="card-body">
+      <form [formGroup]="employmentForm" (ngSubmit)="onSubmit()">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Employment Type ID</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="employmentTypeID"
+              placeholder="e.g. PERM01"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Employment Type Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="employmentTypeName"
+              placeholder="e.g. Permanent"
+            />
+          </div>
+          <div class="col-12 text-end">
+            <button
+              class="btn btn-success"
+              type="submit"
+              [disabled]="employmentForm.invalid"
+            >
+              <i [class]="selectedId ? 'bi bi-pencil-square' : 'bi bi-plus-circle'"></i>
+              {{ selectedId ? 'Update' : 'Add' }}
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary ms-2"
+              (click)="resetForm()"
+            >
+              <i class="bi bi-x-circle"></i> Clear
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Table Section -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th><i class="bi bi-hash"></i> ID</th>
+          <th><i class="bi bi-person-badge-fill"></i> Name</th>
+          <th><i class="bi bi-gear-fill"></i> Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of paginatedEmploymentTypes">
+          <td><span class="badge bg-primary">{{ item.employmentTypeID }}</span></td>
+          <td>{{ item.employmentTypeName }}</td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary me-2" (click)="edit(item)">
+              <i class="bi bi-pencil-square"></i> Edit
+            </button>
+            <button class="btn btn-sm btn-outline-danger" (click)="delete(item.employmentTypeID)">
+              <i class="bi bi-trash-fill"></i> Delete
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="paginatedEmploymentTypes.length === 0">
+          <td colspan="3" class="text-center text-muted">
+            <i class="bi bi-emoji-frown"></i> No data found.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="d-flex justify-content-between align-items-center mt-3">
+    <span class="text-muted">
+      Page {{ currentPage }} of {{ totalPages }}
+    </span>
+    <nav>
+      <ul class="pagination mb-0">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <button class="page-link" (click)="changePage('prev')">Previous</button>
+        </li>
+        <li class="page-item disabled">
+          <span class="page-link">{{ currentPage }}</span>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <button class="page-link" (click)="changePage('next')">Next</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
