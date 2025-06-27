@@ -1,0 +1,162 @@
+<div class="container my-4">
+  <h2 class="mb-4 text-center text-primary fw-bold">
+    <i class="bi bi-people-fill me-2" style="font-size: 1.5rem;"></i>
+    Multiple Employee Attendance Report
+  </h2>
+
+  <!-- Filter Form -->
+  <form (ngSubmit)="loadAttendance()" #filterForm="ngForm" class="row g-3 mb-4 align-items-center">
+
+    <div class="col-md-3">
+      <label for="startDate" class="form-label">
+        <i class="bi bi-calendar-event"></i> Start Date
+      </label>
+      <input type="date" id="startDate" class="form-control" [(ngModel)]="startDate" name="startDate" />
+    </div>
+
+    <div class="col-md-3">
+      <label for="endDate" class="form-label">
+        <i class="bi bi-calendar-event"></i> End Date
+      </label>
+      <input type="date" id="endDate" class="form-control" [(ngModel)]="endDate" name="endDate" />
+    </div>
+
+    <div class="col-md-3">
+      <label for="specificDate" class="form-label">
+        <i class="bi bi-calendar-check"></i> Specific Date
+      </label>
+      <input type="date" id="specificDate" class="form-control" [(ngModel)]="specificDate" name="specificDate" />
+    </div>
+
+    <!-- Optional employee ID filter commented out -->
+    <!--
+    <div class="col-md-3">
+      <label for="employeeId" class="form-label">
+        <i class="bi bi-person"></i> Employee ID
+      </label>
+      <input type="text" id="employeeId" class="form-control" [(ngModel)]="employeeId" name="employeeId" placeholder="Employee ID" />
+    </div>
+    -->
+
+    <div class="col-md-3">
+      <label for="divisionId" class="form-label">
+        <i class="bi bi-diagram-3"></i> Division ID
+      </label>
+      <input type="text" id="divisionId" class="form-control" [(ngModel)]="divisionId" name="divisionId" />
+    </div>
+
+    <div class="col-md-3">
+      <label for="departmentId" class="form-label">
+        <i class="bi bi-building"></i> Department ID
+      </label>
+      <input type="text" id="departmentId" class="form-control" [(ngModel)]="departmentId" name="departmentId" />
+    </div>
+
+    <div class="col-md-3">
+      <label for="unitId" class="form-label">
+        <i class="bi bi-gear"></i> Unit ID
+      </label>
+      <input type="text" id="unitId" class="form-control" [(ngModel)]="unitId" name="unitId" />
+    </div>
+
+    <div class="col-md-3">
+      <label for="sectionId" class="form-label">
+        <i class="bi bi-layout-sidebar"></i> Section ID
+      </label>
+      <input type="text" id="sectionId" class="form-control" [(ngModel)]="sectionId" name="sectionId" />
+    </div>
+
+    <div class="col-md-3">
+      <label for="lineId" class="form-label">
+        <i class="bi bi-hash"></i> Line ID
+      </label>
+      <input type="text" id="lineId" class="form-control" [(ngModel)]="lineId" name="lineId" />
+    </div>
+
+    <div class="col-12 mt-3">
+      <button type="submit" class="btn btn-primary me-2">
+        <i class="bi bi-search"></i> Search
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetFilters()">
+        <i class="bi bi-arrow-clockwise"></i> Reset
+      </button>
+    </div>
+  </form>
+
+  <!-- Loading and error display -->
+  <div *ngIf="loading" class="alert alert-info">
+    <i class="bi bi-arrow-repeat spin"></i> Loading...
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger">
+    <i class="bi bi-exclamation-triangle-fill"></i> {{ error }}
+  </div>
+
+  <!-- Attendance Table -->
+  <div class="table-responsive" *ngIf="attendanceList.length > 0">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Employee ID</th>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Division</th>
+          <th>Department</th>
+          <th>Section</th>
+          <th>Line</th>
+          <th>Record Date</th>
+          <th>In Time</th>
+          <th>Out Time</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of attendanceList">
+          <td>{{ record.employeeId }}</td>
+          <td>{{ record.employeeName }}</td>
+          <td>{{ record.unitName }}</td>
+          <td>{{ record.divisionName }}</td>
+          <td>{{ record.departmentName }}</td>
+          <td>{{ record.sectionName }}</td>
+          <td>{{ record.lineName }}</td>
+          <td>{{ record.recordDate | date:'yyyy-MM-dd' }}</td>
+          <td>{{ record.inTime || '-' }}</td>
+          <td>{{ record.outTime || '-' }}</td>
+          <td>{{ record.presentStatus }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Attendance Summary Table -->
+  <div *ngIf="!loading && attendanceSummaryKeys.length > 0" class="mt-4">
+   <h4 class="d-flex align-items-center text-primary fw-bold">
+  <i class="bi bi-card-checklist me-2" style="font-size: 1.5rem;"></i>
+  Attendance Summary
+</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm">
+        <thead class="table-light">
+          <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Present Days</th>
+            <!-- <th>Absent Days</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empId of attendanceSummaryKeys">
+            <td>{{ empId }}</td>
+            <td>{{ attendanceSummary[empId].employeeName }}</td>
+            <td>{{ attendanceSummary[empId].present }}</td>
+            <!-- <td>{{ attendanceSummary[empId].absent }}</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && attendanceList.length === 0" class="alert alert-warning">
+    No attendance records found.
+  </div>
+</div>

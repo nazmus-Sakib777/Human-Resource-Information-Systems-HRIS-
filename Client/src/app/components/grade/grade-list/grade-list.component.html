@@ -1,0 +1,63 @@
+
+
+<!-- Add New Grade Button -->
+<button mat-raised-button color="primary" (click)="onAddNew()">
+  <mat-icon>add</mat-icon> Add New Grade
+</button>
+
+<h2>Grade List</h2>
+
+<!-- Grade Form for Add/Edit -->
+<app-grade-form *ngIf="showForm"
+                [grade]="selectedGrade!"
+                [isEdit]="isEditing"
+                (formSubmitted)="onFormSubmitted()">
+</app-grade-form>
+
+<!-- Material Table -->
+<mat-card class="mat-elevation-z2" style="margin-top: 20px;">
+  <mat-table [dataSource]="grades" class="mat-elevation-z1">
+
+    <!-- Grade ID Column -->
+    <ng-container matColumnDef="gradeID">
+      <mat-header-cell *matHeaderCellDef> Grade ID </mat-header-cell>
+      <mat-cell *matCellDef="let grade"> {{ grade.gradeID }} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="gradeName">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let grade"> {{ grade.gradeName }} </mat-cell>
+    </ng-container>
+
+    <!-- Gross Column -->
+    <ng-container matColumnDef="gross">
+      <mat-header-cell *matHeaderCellDef> Gross </mat-header-cell>
+      <mat-cell *matCellDef="let grade"> {{ grade.gross }} </mat-cell>
+    </ng-container>
+
+    <!-- Basic Column -->
+    <ng-container matColumnDef="basic">
+      <mat-header-cell *matHeaderCellDef> Basic </mat-header-cell>
+      <mat-cell *matCellDef="let grade"> {{ grade.basic }} </mat-cell>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+      <mat-cell *matCellDef="let grade">
+        <button mat-icon-button color="accent" (click)="onEdit(grade)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="onDelete(grade.gradeID)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+</mat-card>

@@ -1,0 +1,6158 @@
+[
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceBonusController",
+    "Method": "GetAttendanceBonus",
+    "RelativePath": "api/AttendanceBonus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.AttendanceBonus, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceBonusController",
+    "Method": "PostAttendanceBonus",
+    "RelativePath": "api/AttendanceBonus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attendanceBonus",
+        "Type": "HRIS_R62.Models.AttendanceBonus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.AttendanceBonus",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceBonusController",
+    "Method": "GetAttendanceBonus",
+    "RelativePath": "api/AttendanceBonus/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.AttendanceBonus",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceBonusController",
+    "Method": "PutAttendanceBonus",
+    "RelativePath": "api/AttendanceBonus/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "attendanceBonus",
+        "Type": "HRIS_R62.Models.AttendanceBonus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceBonusController",
+    "Method": "DeleteAttendanceBonus",
+    "RelativePath": "api/AttendanceBonus/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceConfigurationsController",
+    "Method": "GetAttendanceConfigurations",
+    "RelativePath": "api/AttendanceConfigurations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.AttendanceConfiguration, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceConfigurationsController",
+    "Method": "PostAttendanceConfiguration",
+    "RelativePath": "api/AttendanceConfigurations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attendanceConfiguration",
+        "Type": "HRIS_R62.Models.AttendanceConfiguration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.AttendanceConfiguration",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceConfigurationsController",
+    "Method": "GetAttendanceConfiguration",
+    "RelativePath": "api/AttendanceConfigurations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.AttendanceConfiguration",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceConfigurationsController",
+    "Method": "PutAttendanceConfiguration",
+    "RelativePath": "api/AttendanceConfigurations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "attendanceConfiguration",
+        "Type": "HRIS_R62.Models.AttendanceConfiguration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceConfigurationsController",
+    "Method": "DeleteAttendanceConfiguration",
+    "RelativePath": "api/AttendanceConfigurations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceRecordsController",
+    "Method": "GetAllAttendanceRecords",
+    "RelativePath": "api/AttendanceRecords",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceRecordsController",
+    "Method": "CreateAttendanceRecord",
+    "RelativePath": "api/AttendanceRecords",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attendance",
+        "Type": "HRIS_R62.Models.AttendanceRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceRecordsController",
+    "Method": "GetAttendanceRecord",
+    "RelativePath": "api/AttendanceRecords/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceRecordsController",
+    "Method": "UpdateAttendanceRecord",
+    "RelativePath": "api/AttendanceRecords/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "attendance",
+        "Type": "HRIS_R62.Models.AttendanceRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceRecordsController",
+    "Method": "DeleteAttendanceRecord",
+    "RelativePath": "api/AttendanceRecords/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceStatusController",
+    "Method": "GetAttendanceStatuss",
+    "RelativePath": "api/AttendanceStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.AttendanceStatus, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceStatusController",
+    "Method": "PostAttendanceStatus",
+    "RelativePath": "api/AttendanceStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attendanceStatus",
+        "Type": "HRIS_R62.Models.AttendanceStatus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.AttendanceStatus",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceStatusController",
+    "Method": "GetAttendanceStatus",
+    "RelativePath": "api/AttendanceStatus/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.AttendanceStatus",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceStatusController",
+    "Method": "PutAttendanceStatus",
+    "RelativePath": "api/AttendanceStatus/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "attendanceStatus",
+        "Type": "HRIS_R62.Models.AttendanceStatus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceStatusController",
+    "Method": "DeleteAttendanceStatus",
+    "RelativePath": "api/AttendanceStatus/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.AttendanceStatusController",
+    "Method": "CreateSp",
+    "RelativePath": "api/AttendanceStatus/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "stname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "stshortname",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.BuildingsController",
+    "Method": "GetBuildings",
+    "RelativePath": "api/Buildings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Building, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.BuildingsController",
+    "Method": "GetBuilding",
+    "RelativePath": "api/Buildings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Building",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.BuildingsController",
+    "Method": "PutBuilding",
+    "RelativePath": "api/Buildings/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "building",
+        "Type": "HRIS_R62.Models.Building",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.BuildingsController",
+    "Method": "DeleteBuilding",
+    "RelativePath": "api/Buildings/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.BuildingsController",
+    "Method": "InsertBuilding",
+    "RelativePath": "api/Buildings/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BuildingID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Floor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CareerHistoriesController",
+    "Method": "GetCareerHistories",
+    "RelativePath": "api/CareerHistories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.CareerHistory, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CareerHistoriesController",
+    "Method": "CreateUsingSP",
+    "RelativePath": "api/CareerHistories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "history",
+        "Type": "HRIS_R62.Models.CareerHistory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CareerHistoriesController",
+    "Method": "GetCareerHistory",
+    "RelativePath": "api/CareerHistories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.CareerHistory",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CareerHistoriesController",
+    "Method": "PutCareerHistory",
+    "RelativePath": "api/CareerHistories/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "careerHistory",
+        "Type": "HRIS_R62.Models.CareerHistory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CareerHistoriesController",
+    "Method": "DeleteCareerHistory",
+    "RelativePath": "api/CareerHistories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ChildrenInformationController",
+    "Method": "GetAll",
+    "RelativePath": "api/ChildrenInformation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.ChildrenInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ChildrenInformationController",
+    "Method": "CreateUsingSP",
+    "RelativePath": "api/ChildrenInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "child",
+        "Type": "HRIS_R62.Models.ChildrenInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ChildrenInformationController",
+    "Method": "GetById",
+    "RelativePath": "api/ChildrenInformation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ChildrenInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ChildrenInformationController",
+    "Method": "Update",
+    "RelativePath": "api/ChildrenInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "child",
+        "Type": "HRIS_R62.Models.ChildrenInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ChildrenInformationController",
+    "Method": "Delete",
+    "RelativePath": "api/ChildrenInformation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CompaniesController",
+    "Method": "GetCompanies",
+    "RelativePath": "api/Companies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Company, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CompaniesController",
+    "Method": "GetCompany",
+    "RelativePath": "api/Companies/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Company",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CompaniesController",
+    "Method": "PutCompany",
+    "RelativePath": "api/Companies/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "company",
+        "Type": "HRIS_R62.Models.Company",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CompaniesController",
+    "Method": "DeleteCompany",
+    "RelativePath": "api/Companies/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.CompaniesController",
+    "Method": "InsertCompany",
+    "RelativePath": "api/Companies/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CompanyID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyShortName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyNameLocal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FaxNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ContactPersonInformationsController",
+    "Method": "GetContactPersonInformations",
+    "RelativePath": "api/ContactPersonInformations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.ContactPersonInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ContactPersonInformationsController",
+    "Method": "CreateUsingSP",
+    "RelativePath": "api/ContactPersonInformations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contact",
+        "Type": "HRIS_R62.Models.ContactPersonInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ContactPersonInformationsController",
+    "Method": "GetContactPersonInformation",
+    "RelativePath": "api/ContactPersonInformations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ContactPersonInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ContactPersonInformationsController",
+    "Method": "PutContactPersonInformation",
+    "RelativePath": "api/ContactPersonInformations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "contactPersonInformation",
+        "Type": "HRIS_R62.Models.ContactPersonInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ContactPersonInformationsController",
+    "Method": "DeleteContactPersonInformation",
+    "RelativePath": "api/ContactPersonInformations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DateWiseOfficeTimesController",
+    "Method": "GetDateWiseOfficeTimes",
+    "RelativePath": "api/DateWiseOfficeTimes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.DateWiseOfficeTime, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DateWiseOfficeTimesController",
+    "Method": "PostDateWiseOfficeTime",
+    "RelativePath": "api/DateWiseOfficeTimes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dateWiseOfficeTime",
+        "Type": "HRIS_R62.Models.DateWiseOfficeTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.DateWiseOfficeTime",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DateWiseOfficeTimesController",
+    "Method": "GetDateWiseOfficeTime",
+    "RelativePath": "api/DateWiseOfficeTimes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.DateWiseOfficeTime",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DateWiseOfficeTimesController",
+    "Method": "PutDateWiseOfficeTime",
+    "RelativePath": "api/DateWiseOfficeTimes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dateWiseOfficeTime",
+        "Type": "HRIS_R62.Models.DateWiseOfficeTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DateWiseOfficeTimesController",
+    "Method": "CreateSp",
+    "RelativePath": "api/DateWiseOfficeTimes/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DateWiseId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "start",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "lunch",
+        "Type": "System.TimeOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "breakDuration",
+        "Type": "System.TimeOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "empId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DepartmentsController",
+    "Method": "GetDepartments",
+    "RelativePath": "api/Departments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Department, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DepartmentsController",
+    "Method": "GetDepartment",
+    "RelativePath": "api/Departments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Department",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DepartmentsController",
+    "Method": "PutDepartment",
+    "RelativePath": "api/Departments/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "department",
+        "Type": "HRIS_R62.Models.Department",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DepartmentsController",
+    "Method": "DeleteDepartment",
+    "RelativePath": "api/Departments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DepartmentsController",
+    "Method": "CreateDepartment",
+    "RelativePath": "api/Departments/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HRIS_R62.DTIOs_forSp.DepartmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DesignationsController",
+    "Method": "GetDesignations",
+    "RelativePath": "api/Designations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Designation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DesignationsController",
+    "Method": "GetDesignation",
+    "RelativePath": "api/Designations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Designation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DesignationsController",
+    "Method": "PutDesignation",
+    "RelativePath": "api/Designations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "designation",
+        "Type": "HRIS_R62.Models.Designation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DesignationsController",
+    "Method": "InsertDesignation",
+    "RelativePath": "api/Designations/SP_Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DesignationID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DesignationName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DesignationNameLocal",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DisciplinaryActionsController",
+    "Method": "GetDisciplinaryActions",
+    "RelativePath": "api/DisciplinaryActions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.DisciplinaryAction, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DisciplinaryActionsController",
+    "Method": "PostDisciplinaryAction",
+    "RelativePath": "api/DisciplinaryActions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "disciplinaryAction",
+        "Type": "HRIS_R62.Models.DisciplinaryAction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.DisciplinaryAction",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DisciplinaryActionsController",
+    "Method": "GetDisciplinaryAction",
+    "RelativePath": "api/DisciplinaryActions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.DisciplinaryAction",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DisciplinaryActionsController",
+    "Method": "PutDisciplinaryAction",
+    "RelativePath": "api/DisciplinaryActions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "disciplinaryAction",
+        "Type": "HRIS_R62.Models.DisciplinaryAction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DisciplinaryActionsController",
+    "Method": "DeleteDisciplinaryAction",
+    "RelativePath": "api/DisciplinaryActions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DivisionsController",
+    "Method": "GetDivisions",
+    "RelativePath": "api/Divisions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Division, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DivisionsController",
+    "Method": "GetDivision",
+    "RelativePath": "api/Divisions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Division",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DivisionsController",
+    "Method": "PutDivision",
+    "RelativePath": "api/Divisions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "division",
+        "Type": "HRIS_R62.Models.Division",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.DivisionsController",
+    "Method": "CreateSp",
+    "RelativePath": "api/Divisions/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "divId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "divName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivShortName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "divlocalName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EarlyLeaveInformationController",
+    "Method": "GetEarlyLeaveInformations",
+    "RelativePath": "api/EarlyLeaveInformation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.EarlyLeaveInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EarlyLeaveInformationController",
+    "Method": "PostEarlyLeaveInformation",
+    "RelativePath": "api/EarlyLeaveInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "earlyLeaveInformation",
+        "Type": "HRIS_R62.Models.EarlyLeaveInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EarlyLeaveInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EarlyLeaveInformationController",
+    "Method": "GetEarlyLeaveInformation",
+    "RelativePath": "api/EarlyLeaveInformation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EarlyLeaveInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EarlyLeaveInformationController",
+    "Method": "PutEarlyLeaveInformation",
+    "RelativePath": "api/EarlyLeaveInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "earlyLeaveInformation",
+        "Type": "HRIS_R62.Models.EarlyLeaveInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EarlyLeaveInformationController",
+    "Method": "DeleteEarlyLeaveInformation",
+    "RelativePath": "api/EarlyLeaveInformation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EarlyLeaveInformationController",
+    "Method": "CreateSp",
+    "RelativePath": "api/EarlyLeaveInformation/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ldate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ltype",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ltime",
+        "Type": "System.TimeOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "empId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeBenefitsController",
+    "Method": "GetEmployeeBenefits",
+    "RelativePath": "api/EmployeeBenefits",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.EmployeeBenefits, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeBenefitsController",
+    "Method": "InsertEmployeeBenefit",
+    "RelativePath": "api/EmployeeBenefits",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeBenefit",
+        "Type": "HRIS_R62.Models.EmployeeBenefits",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeBenefitsController",
+    "Method": "GetEmployeeBenefits",
+    "RelativePath": "api/EmployeeBenefits/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeBenefits",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeBenefitsController",
+    "Method": "PutEmployeeBenefits",
+    "RelativePath": "api/EmployeeBenefits/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeBenefits",
+        "Type": "HRIS_R62.Models.EmployeeBenefits",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeBenefitsController",
+    "Method": "DeleteEmployeeBenefits",
+    "RelativePath": "api/EmployeeBenefits/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeComplaintsController",
+    "Method": "GetEmployeeComplaints",
+    "RelativePath": "api/EmployeeComplaints",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.EmployeeComplaint, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeComplaintsController",
+    "Method": "PostEmployeeComplaint",
+    "RelativePath": "api/EmployeeComplaints",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeComplaint",
+        "Type": "HRIS_R62.Models.EmployeeComplaint",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeComplaint",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeComplaintsController",
+    "Method": "GetEmployeeComplaint",
+    "RelativePath": "api/EmployeeComplaints/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeComplaint",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeComplaintsController",
+    "Method": "PutEmployeeComplaint",
+    "RelativePath": "api/EmployeeComplaints/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeComplaint",
+        "Type": "HRIS_R62.Models.EmployeeComplaint",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeComplaintsController",
+    "Method": "DeleteEmployeeComplaint",
+    "RelativePath": "api/EmployeeComplaints/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeInformationsController",
+    "Method": "GetEmployeeInformations",
+    "RelativePath": "api/EmployeeInformations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.EmployeeInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeInformationsController",
+    "Method": "PostEmployeeInformation",
+    "RelativePath": "api/EmployeeInformations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeInformation",
+        "Type": "HRIS_R62.Models.EmployeeInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeInformationsController",
+    "Method": "GetEmployeeInformation",
+    "RelativePath": "api/EmployeeInformations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeInformationsController",
+    "Method": "PutEmployeeInformation",
+    "RelativePath": "api/EmployeeInformations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeInformation",
+        "Type": "HRIS_R62.Models.EmployeeInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeInformationsController",
+    "Method": "DeleteEmployeeInformation",
+    "RelativePath": "api/EmployeeInformations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeSkillsController",
+    "Method": "GetEmployeeSkills",
+    "RelativePath": "api/EmployeeSkills",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.EmployeeSkill, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeSkillsController",
+    "Method": "PostEmployeeSkill",
+    "RelativePath": "api/EmployeeSkills",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeSkill",
+        "Type": "HRIS_R62.Models.EmployeeSkill",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeSkill",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeSkillsController",
+    "Method": "GetEmployeeSkill",
+    "RelativePath": "api/EmployeeSkills/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeSkill",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeSkillsController",
+    "Method": "PutEmployeeSkill",
+    "RelativePath": "api/EmployeeSkills/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeSkill",
+        "Type": "HRIS_R62.Models.EmployeeSkill",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeSkillsController",
+    "Method": "DeleteEmployeeSkill",
+    "RelativePath": "api/EmployeeSkills/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeTaxController",
+    "Method": "GetEmployeeTaxes",
+    "RelativePath": "api/EmployeeTax",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.EmployeeTax, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeTaxController",
+    "Method": "PostEmployeeTax",
+    "RelativePath": "api/EmployeeTax",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeTax",
+        "Type": "HRIS_R62.Models.EmployeeTax",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeTax",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeTaxController",
+    "Method": "GetEmployeeTax",
+    "RelativePath": "api/EmployeeTax/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.EmployeeTax",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeTaxController",
+    "Method": "PutEmployeeTax",
+    "RelativePath": "api/EmployeeTax/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeTax",
+        "Type": "HRIS_R62.Models.EmployeeTax",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmployeeTaxController",
+    "Method": "DeleteEmployeeTax",
+    "RelativePath": "api/EmployeeTax/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmploymentTypesController",
+    "Method": "GetEmploymentTypes",
+    "RelativePath": "api/EmploymentTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EmploymentType, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmploymentTypesController",
+    "Method": "InsertEmploymentType",
+    "RelativePath": "api/EmploymentTypes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employmentType",
+        "Type": "EmploymentType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmploymentTypesController",
+    "Method": "GetEmploymentType",
+    "RelativePath": "api/EmploymentTypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EmploymentType",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmploymentTypesController",
+    "Method": "PutEmploymentType",
+    "RelativePath": "api/EmploymentTypes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "employmentType",
+        "Type": "EmploymentType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.EmploymentTypesController",
+    "Method": "DeleteEmploymentType",
+    "RelativePath": "api/EmploymentTypes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.GradesController",
+    "Method": "GetGrades",
+    "RelativePath": "api/Grades",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Grade, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.GradesController",
+    "Method": "PostGrade",
+    "RelativePath": "api/Grades",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grade",
+        "Type": "HRIS_R62.Models.Grade",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Grade",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.GradesController",
+    "Method": "GetGrade",
+    "RelativePath": "api/Grades/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Grade",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.GradesController",
+    "Method": "PutGrade",
+    "RelativePath": "api/Grades/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "grade",
+        "Type": "HRIS_R62.Models.Grade",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.GradesController",
+    "Method": "DeleteGrade",
+    "RelativePath": "api/Grades/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayBillRatesController",
+    "Method": "GetHoliDayBillRates",
+    "RelativePath": "api/HoliDayBillRates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.HoliDayBillRate, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayBillRatesController",
+    "Method": "InsertHolidayBillRate",
+    "RelativePath": "api/HoliDayBillRates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "holiDayBillRate",
+        "Type": "HRIS_R62.Models.HoliDayBillRate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayBillRatesController",
+    "Method": "GetHoliDayBillRate",
+    "RelativePath": "api/HoliDayBillRates/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.HoliDayBillRate",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayBillRatesController",
+    "Method": "PutHoliDayBillRate",
+    "RelativePath": "api/HoliDayBillRates/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "holiDayBillRate",
+        "Type": "HRIS_R62.Models.HoliDayBillRate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayBillRatesController",
+    "Method": "DeleteHoliDayBillRate",
+    "RelativePath": "api/HoliDayBillRates/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayEntitledEmployeesController",
+    "Method": "GetHoliDayEntitledEmployees",
+    "RelativePath": "api/HoliDayEntitledEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.HoliDayEntitledEmployee, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayEntitledEmployeesController",
+    "Method": "InsertHolidayEntitledEmployee",
+    "RelativePath": "api/HoliDayEntitledEmployees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "holiDayEntitledEmployee",
+        "Type": "HRIS_R62.Models.HoliDayEntitledEmployee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayEntitledEmployeesController",
+    "Method": "GetHoliDayEntitledEmployee",
+    "RelativePath": "api/HoliDayEntitledEmployees/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.HoliDayEntitledEmployee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayEntitledEmployeesController",
+    "Method": "PutHoliDayEntitledEmployee",
+    "RelativePath": "api/HoliDayEntitledEmployees/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "holiDayEntitledEmployee",
+        "Type": "HRIS_R62.Models.HoliDayEntitledEmployee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayEntitledEmployeesController",
+    "Method": "DeleteHoliDayEntitledEmployee",
+    "RelativePath": "api/HoliDayEntitledEmployees/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayInformationsController",
+    "Method": "GetHoliDayInformations",
+    "RelativePath": "api/HoliDayInformations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.HoliDayInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayInformationsController",
+    "Method": "InsertHoliDayInformation",
+    "RelativePath": "api/HoliDayInformations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "holiDayInformation",
+        "Type": "HRIS_R62.Models.HoliDayInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayInformationsController",
+    "Method": "GetHoliDayInformation",
+    "RelativePath": "api/HoliDayInformations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.HoliDayInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayInformationsController",
+    "Method": "PutHoliDayInformation",
+    "RelativePath": "api/HoliDayInformations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "holiDayInformation",
+        "Type": "HRIS_R62.Models.HoliDayInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.HoliDayInformationsController",
+    "Method": "DeleteHoliDayInformation",
+    "RelativePath": "api/HoliDayInformations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.JobLeftsController",
+    "Method": "GetJobLefts",
+    "RelativePath": "api/JobLefts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[JobLeft, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.JobLeftsController",
+    "Method": "InsertJobLeft",
+    "RelativePath": "api/JobLefts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobLeft",
+        "Type": "JobLeft",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.JobLeftsController",
+    "Method": "GetJobLeft",
+    "RelativePath": "api/JobLefts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobLeft",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.JobLeftsController",
+    "Method": "PutJobLeft",
+    "RelativePath": "api/JobLefts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "jobLeft",
+        "Type": "JobLeft",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.JobLeftsController",
+    "Method": "DeleteJobLeft",
+    "RelativePath": "api/JobLefts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LateApprovalController",
+    "Method": "GetLateApprovals",
+    "RelativePath": "api/LateApproval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.LateApproval, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LateApprovalController",
+    "Method": "PostLateApproval",
+    "RelativePath": "api/LateApproval",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lateApproval",
+        "Type": "HRIS_R62.Models.LateApproval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.LateApproval",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LateApprovalController",
+    "Method": "GetLateApproval",
+    "RelativePath": "api/LateApproval/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.LateApproval",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LateApprovalController",
+    "Method": "PutLateApproval",
+    "RelativePath": "api/LateApproval/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "lateApproval",
+        "Type": "HRIS_R62.Models.LateApproval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LateApprovalController",
+    "Method": "DeleteLateApproval",
+    "RelativePath": "api/LateApproval/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LateApprovalController",
+    "Method": "CreateSp",
+    "RelativePath": "api/LateApproval/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ldate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ltime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ledate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "lreason",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "lareaclearence",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "larearemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "appdate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "euser",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "empId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveApprovalController",
+    "Method": "GetAll",
+    "RelativePath": "api/LeaveApproval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveApprovalController",
+    "Method": "Create",
+    "RelativePath": "api/LeaveApproval",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.LeaveApproval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveApprovalController",
+    "Method": "GetById",
+    "RelativePath": "api/LeaveApproval/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveApprovalController",
+    "Method": "Update",
+    "RelativePath": "api/LeaveApproval/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.LeaveApproval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveEncashmentController",
+    "Method": "GetLeaveEncashment",
+    "RelativePath": "api/LeaveEncashment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveEncashmentController",
+    "Method": "GetById",
+    "RelativePath": "api/LeaveEncashment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveEncashmentController",
+    "Method": "Update",
+    "RelativePath": "api/LeaveEncashment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.LeaveEncashment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveEncashmentController",
+    "Method": "Create",
+    "RelativePath": "api/LeaveEncashment/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.LeaveEncashment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveRecordController",
+    "Method": "GetAll",
+    "RelativePath": "api/LeaveRecord",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveRecordController",
+    "Method": "GetById",
+    "RelativePath": "api/LeaveRecord/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveRecordController",
+    "Method": "Create",
+    "RelativePath": "api/LeaveRecord/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.LeaveRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LeaveRecordController",
+    "Method": "Update",
+    "RelativePath": "api/LeaveRecord/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.LeaveRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LineInformationsController",
+    "Method": "GetLineInformations",
+    "RelativePath": "api/LineInformations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.LineInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LineInformationsController",
+    "Method": "PostLineInformation",
+    "RelativePath": "api/LineInformations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lineInformation",
+        "Type": "HRIS_R62.Models.LineInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.LineInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LineInformationsController",
+    "Method": "GetLineInformation",
+    "RelativePath": "api/LineInformations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.LineInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LineInformationsController",
+    "Method": "PutLineInformation",
+    "RelativePath": "api/LineInformations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "lineInformation",
+        "Type": "HRIS_R62.Models.LineInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LineInformationsController",
+    "Method": "InsertLineInformations",
+    "RelativePath": "api/LineInformations/SP_Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LineID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LineName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EntryDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UnitID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BuildingID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SectionsID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LogFilesController",
+    "Method": "GetLogFiles",
+    "RelativePath": "api/LogFiles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.LogFile, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LogFilesController",
+    "Method": "CreateLogFile",
+    "RelativePath": "api/LogFiles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "log",
+        "Type": "HRIS_R62.Models.LogFile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.LogFile",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LogFilesController",
+    "Method": "GetLogFile",
+    "RelativePath": "api/LogFiles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.LogFile",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LogFilesController",
+    "Method": "UpdateLogFile",
+    "RelativePath": "api/LogFiles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedLog",
+        "Type": "HRIS_R62.Models.LogFile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.LogFilesController",
+    "Method": "DeleteLogFile",
+    "RelativePath": "api/LogFiles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ManualAttendanceController",
+    "Method": "GetManualAttendances",
+    "RelativePath": "api/ManualAttendance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.ManualAttendance, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ManualAttendanceController",
+    "Method": "PostManualAttendance",
+    "RelativePath": "api/ManualAttendance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "manualAttendance",
+        "Type": "HRIS_R62.Models.ManualAttendance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ManualAttendance",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ManualAttendanceController",
+    "Method": "GetManualAttendance",
+    "RelativePath": "api/ManualAttendance/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ManualAttendance",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ManualAttendanceController",
+    "Method": "PutManualAttendance",
+    "RelativePath": "api/ManualAttendance/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "manualAttendance",
+        "Type": "HRIS_R62.Models.ManualAttendance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ManualAttendanceController",
+    "Method": "DeleteManualAttendance",
+    "RelativePath": "api/ManualAttendance/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ManualAttendanceController",
+    "Method": "CreateSp",
+    "RelativePath": "api/ManualAttendance/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "adate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "atime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "edate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "reason",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "laclear",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "laremarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "appdate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "euser",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "outtime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "remarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "empId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityController",
+    "Method": "GetAll",
+    "RelativePath": "api/Maternity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityController",
+    "Method": "GetById",
+    "RelativePath": "api/Maternity/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityController",
+    "Method": "Update",
+    "RelativePath": "api/Maternity/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.MaternityBill",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityController",
+    "Method": "Create",
+    "RelativePath": "api/Maternity/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.MaternityBill",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityConfigController",
+    "Method": "GetAll",
+    "RelativePath": "api/MaternityConfig",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityConfigController",
+    "Method": "GetById",
+    "RelativePath": "api/MaternityConfig/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityConfigController",
+    "Method": "Update",
+    "RelativePath": "api/MaternityConfig/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.MaternityConfiguration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.MaternityConfigController",
+    "Method": "Create",
+    "RelativePath": "api/MaternityConfig/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "HRIS_R62.Models.MaternityConfiguration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.NomineeInformationController",
+    "Method": "GetAll",
+    "RelativePath": "api/NomineeInformation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NomineeInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.NomineeInformationController",
+    "Method": "CreateUsingSP",
+    "RelativePath": "api/NomineeInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nominee",
+        "Type": "NomineeInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.NomineeInformationController",
+    "Method": "GetById",
+    "RelativePath": "api/NomineeInformation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NomineeInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.NomineeInformationController",
+    "Method": "Update",
+    "RelativePath": "api/NomineeInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "nominee",
+        "Type": "NomineeInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.NomineeInformationController",
+    "Method": "Delete",
+    "RelativePath": "api/NomineeInformation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ProximityRecordController",
+    "Method": "GetProximityRecords",
+    "RelativePath": "api/ProximityRecord",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.ProximityRecord, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ProximityRecordController",
+    "Method": "PostProximityRecord",
+    "RelativePath": "api/ProximityRecord",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proximityRecord",
+        "Type": "HRIS_R62.Models.ProximityRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ProximityRecord",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ProximityRecordController",
+    "Method": "GetProximityRecord",
+    "RelativePath": "api/ProximityRecord/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ProximityRecord",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ProximityRecordController",
+    "Method": "PutProximityRecord",
+    "RelativePath": "api/ProximityRecord/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "proximityRecord",
+        "Type": "HRIS_R62.Models.ProximityRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ProximityRecordController",
+    "Method": "DeleteProximityRecord",
+    "RelativePath": "api/ProximityRecord/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetFestivalBonusById",
+    "RelativePath": "api/Salary/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.FestivalBonus",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetAllBonusRecord",
+    "RelativePath": "api/Salary/BonusRecord",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.BonusRecord, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "CreateBonusRecord",
+    "RelativePath": "api/Salary/BonusRecord",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "record",
+        "Type": "HRIS_R62.Models.BonusRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetBonusRecordByID",
+    "RelativePath": "api/Salary/BonusRecord{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.BonusRecord",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateBonusRecord",
+    "RelativePath": "api/Salary/BonusRecord{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "record",
+        "Type": "HRIS_R62.Models.BonusRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteBonusRecord",
+    "RelativePath": "api/Salary/BonusRecord{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetAllFestivalBonus",
+    "RelativePath": "api/Salary/FestivalBonus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.FestivalBonus, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "CreateFestivalBonus",
+    "RelativePath": "api/Salary/FestivalBonus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bonus",
+        "Type": "HRIS_R62.Models.FestivalBonus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateFestivalBonus",
+    "RelativePath": "api/Salary/FestivalBonus{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "bonus",
+        "Type": "HRIS_R62.Models.FestivalBonus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteFestivalBonus",
+    "RelativePath": "api/Salary/FestivalBonus{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetAllFoodCharge",
+    "RelativePath": "api/Salary/FoodCharge",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.FoodCharge, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "CreateFoodCharge",
+    "RelativePath": "api/Salary/FoodCharge",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "charge",
+        "Type": "HRIS_R62.Models.FoodCharge",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetFoodChargeById",
+    "RelativePath": "api/Salary/FoodCharge{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.FoodCharge",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateFoodCharge",
+    "RelativePath": "api/Salary/FoodCharge{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "charge",
+        "Type": "HRIS_R62.Models.FoodCharge",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteFoodCharge",
+    "RelativePath": "api/Salary/FoodCharge{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetAllNightAllowance",
+    "RelativePath": "api/Salary/NightAllowance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.NightAllowance, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "Create",
+    "RelativePath": "api/Salary/NightAllowance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRIS_R62.Models.NightAllowance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetNightAllowanceById",
+    "RelativePath": "api/Salary/NightAllowance{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.NightAllowance",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateNightAllowance",
+    "RelativePath": "api/Salary/NightAllowance{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "record",
+        "Type": "HRIS_R62.Models.NightAllowance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteNightAllowance",
+    "RelativePath": "api/Salary/NightAllowance{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetAllNightAllowanceTime",
+    "RelativePath": "api/Salary/NightAllowanceTime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.NightAllowanceTime, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "Create",
+    "RelativePath": "api/Salary/NightAllowanceTime",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRIS_R62.Models.NightAllowanceTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetNightAllowanceTimeById",
+    "RelativePath": "api/Salary/NightAllowanceTime{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.NightAllowanceTime",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateNightAllowanceTime",
+    "RelativePath": "api/Salary/NightAllowanceTime{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "record",
+        "Type": "HRIS_R62.Models.NightAllowanceTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteNightAllowanceTime",
+    "RelativePath": "api/Salary/NightAllowanceTime{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryDeductions",
+    "RelativePath": "api/Salary/SalaryDeduction",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.SalaryDeduction, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "PostSalaryDeduction",
+    "RelativePath": "api/Salary/SalaryDeduction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deduction",
+        "Type": "HRIS_R62.Models.SalaryDeduction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryDeductionById",
+    "RelativePath": "api/Salary/SalaryDeduction{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.SalaryDeduction",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "PutSalaryDeduction",
+    "RelativePath": "api/Salary/SalaryDeduction{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "salaryDeduction",
+        "Type": "HRIS_R62.Models.SalaryDeduction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteSalaryDeduction",
+    "RelativePath": "api/Salary/SalaryDeduction{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryEntries",
+    "RelativePath": "api/Salary/SalaryEntry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.SalaryEntry, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "PostSalaryEntry",
+    "RelativePath": "api/Salary/SalaryEntry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entry",
+        "Type": "HRIS_R62.Models.SalaryEntry",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryEntry",
+    "RelativePath": "api/Salary/SalaryEntry{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.SalaryEntry",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateSalaryEntry",
+    "RelativePath": "api/Salary/SalaryEntry{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entry",
+        "Type": "HRIS_R62.Models.SalaryEntry",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteSalaryEntry",
+    "RelativePath": "api/Salary/SalaryEntry{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryGrades",
+    "RelativePath": "api/Salary/salaryGrade",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.SalaryGrade, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "PostSalaryGrade",
+    "RelativePath": "api/Salary/salaryGrade",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grade",
+        "Type": "HRIS_R62.Models.SalaryGrade",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryGrade",
+    "RelativePath": "api/Salary/salaryGrade/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.SalaryGrade",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "PutSalaryGrade",
+    "RelativePath": "api/Salary/salaryGrade/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "salaryGrade",
+        "Type": "HRIS_R62.Models.SalaryGrade",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteSalaryGrade",
+    "RelativePath": "api/Salary/salaryGrade/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryProcesses",
+    "RelativePath": "api/Salary/SalaryProcess",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.SalaryProcess, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "PostSalaryProcess",
+    "RelativePath": "api/Salary/SalaryProcess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "process",
+        "Type": "HRIS_R62.Models.SalaryProcess",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryProcess",
+    "RelativePath": "api/Salary/SalaryProcess{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.SalaryProcess",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateSalaryProcess",
+    "RelativePath": "api/Salary/SalaryProcess{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "process",
+        "Type": "HRIS_R62.Models.SalaryProcess",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteSalaryProcess",
+    "RelativePath": "api/Salary/SalaryProcess{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryRecords",
+    "RelativePath": "api/Salary/SalaryRecord",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.SalaryRecord, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "InsertSalaryRecord",
+    "RelativePath": "api/Salary/SalaryRecord",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "record",
+        "Type": "HRIS_R62.Models.SalaryRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetSalaryRecord",
+    "RelativePath": "api/Salary/SalaryRecord{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.SalaryRecord",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateSalaryRecord",
+    "RelativePath": "api/Salary/SalaryRecord{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "record",
+        "Type": "HRIS_R62.Models.SalaryRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteSalaryRecord",
+    "RelativePath": "api/Salary/SalaryRecord{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetAllTiffinAllowanceRate",
+    "RelativePath": "api/Salary/TiffinAllowanceRate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.TiffinAllowanceRate, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "CreateTiffinAllowanceRate",
+    "RelativePath": "api/Salary/TiffinAllowanceRate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tiffinAllowanceRate",
+        "Type": "HRIS_R62.Models.TiffinAllowanceRate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "TiffinAllowanceRate",
+    "RelativePath": "api/Salary/TiffinAllowanceRate{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TiffinAllowanceRate",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "UpdateTiffinAllowanceRate",
+    "RelativePath": "api/Salary/TiffinAllowanceRate{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "rate",
+        "Type": "HRIS_R62.Models.TiffinAllowanceRate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteTiffinAllowanceRate",
+    "RelativePath": "api/Salary/TiffinAllowanceRate{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetAllTiffinAllowanceTime",
+    "RelativePath": "api/Salary/TiffinAllowanceTime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.TiffinAllowanceTime, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "CreateTiffinAllowanceTime",
+    "RelativePath": "api/Salary/TiffinAllowanceTime",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tiffinAllowanceTime",
+        "Type": "HRIS_R62.Models.TiffinAllowanceTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "GetTiffinAllowanceTimeById",
+    "RelativePath": "api/Salary/TiffinAllowanceTime{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TiffinAllowanceTime",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "Update",
+    "RelativePath": "api/Salary/TiffinAllowanceTime{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "record",
+        "Type": "HRIS_R62.Models.TiffinAllowanceTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SalaryController",
+    "Method": "DeleteTiffinAllowanceTime",
+    "RelativePath": "api/Salary/TiffinAllowanceTime{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SectionsController",
+    "Method": "GetSections",
+    "RelativePath": "api/Sections",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Sections, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SectionsController",
+    "Method": "GetSections",
+    "RelativePath": "api/Sections/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Sections",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SectionsController",
+    "Method": "PutSections",
+    "RelativePath": "api/Sections/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sections",
+        "Type": "HRIS_R62.Models.Sections",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SectionsController",
+    "Method": "CreateSp",
+    "RelativePath": "api/Sections/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "secId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "secName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "secShortName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "seclocalName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cmpId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftEmployeesController",
+    "Method": "GetShiftEmployees",
+    "RelativePath": "api/ShiftEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.ShiftEmployee, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftEmployeesController",
+    "Method": "GetShiftEmployee",
+    "RelativePath": "api/ShiftEmployees/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ShiftEmployee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftEmployeesController",
+    "Method": "PutShiftEmployee",
+    "RelativePath": "api/ShiftEmployees/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "shiftEmployee",
+        "Type": "HRIS_R62.Models.ShiftEmployee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftEmployeesController",
+    "Method": "CreateSp",
+    "RelativePath": "api/ShiftEmployees/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shiftEmpId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "from",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "empId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dateWiseShiftId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftTimesController",
+    "Method": "GetShiftTimes",
+    "RelativePath": "api/ShiftTimes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.ShiftTime, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftTimesController",
+    "Method": "InsertShiftTime",
+    "RelativePath": "api/ShiftTimes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shiftTime",
+        "Type": "HRIS_R62.Models.ShiftTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftTimesController",
+    "Method": "GetShiftTime",
+    "RelativePath": "api/ShiftTimes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.ShiftTime",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftTimesController",
+    "Method": "PutShiftTime",
+    "RelativePath": "api/ShiftTimes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "shiftTime",
+        "Type": "HRIS_R62.Models.ShiftTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.ShiftTimesController",
+    "Method": "DeleteShiftTime",
+    "RelativePath": "api/ShiftTimes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpecialEmployeesController",
+    "Method": "GetSpecialEmployees",
+    "RelativePath": "api/SpecialEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.SpecialEmployee, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpecialEmployeesController",
+    "Method": "InsertSpecialEmployee",
+    "RelativePath": "api/SpecialEmployees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "specialEmployee",
+        "Type": "HRIS_R62.Models.SpecialEmployee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpecialEmployeesController",
+    "Method": "GetSpecialEmployee",
+    "RelativePath": "api/SpecialEmployees/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.SpecialEmployee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpecialEmployeesController",
+    "Method": "PutSpecialEmployee",
+    "RelativePath": "api/SpecialEmployees/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "specialEmployee",
+        "Type": "HRIS_R62.Models.SpecialEmployee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpecialEmployeesController",
+    "Method": "DeleteSpecialEmployee",
+    "RelativePath": "api/SpecialEmployees/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpouseInformationController",
+    "Method": "GetAll",
+    "RelativePath": "api/SpouseInformation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SpouseInformation, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpouseInformationController",
+    "Method": "CreateUsingSP",
+    "RelativePath": "api/SpouseInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "spouse",
+        "Type": "SpouseInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpouseInformationController",
+    "Method": "GetById",
+    "RelativePath": "api/SpouseInformation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SpouseInformation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpouseInformationController",
+    "Method": "Update",
+    "RelativePath": "api/SpouseInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "spouse",
+        "Type": "SpouseInformation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SpouseInformationController",
+    "Method": "Delete",
+    "RelativePath": "api/SpouseInformation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SuspendsController",
+    "Method": "GetSuspends",
+    "RelativePath": "api/Suspends",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Suspend, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SuspendsController",
+    "Method": "InsertSuspend",
+    "RelativePath": "api/Suspends",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "suspend",
+        "Type": "HRIS_R62.Models.Suspend",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SuspendsController",
+    "Method": "GetSuspend",
+    "RelativePath": "api/Suspends/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Suspend",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SuspendsController",
+    "Method": "PutSuspend",
+    "RelativePath": "api/Suspends/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "suspend",
+        "Type": "HRIS_R62.Models.Suspend",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.SuspendsController",
+    "Method": "DeleteSuspend",
+    "RelativePath": "api/Suspends/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxAmountsController",
+    "Method": "GetTaxAmounts",
+    "RelativePath": "api/TaxAmounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.TaxAmount, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxAmountsController",
+    "Method": "PostTaxAmount",
+    "RelativePath": "api/TaxAmounts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taxAmount",
+        "Type": "HRIS_R62.Models.TaxAmount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TaxAmount",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxAmountsController",
+    "Method": "GetTaxAmount",
+    "RelativePath": "api/TaxAmounts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TaxAmount",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxAmountsController",
+    "Method": "PutTaxAmount",
+    "RelativePath": "api/TaxAmounts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "taxAmount",
+        "Type": "HRIS_R62.Models.TaxAmount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxAmountsController",
+    "Method": "DeleteTaxAmount",
+    "RelativePath": "api/TaxAmounts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxExemptedsController",
+    "Method": "GetTaxExempteds",
+    "RelativePath": "api/TaxExempteds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.TaxExempted, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxExemptedsController",
+    "Method": "PostTaxExempted",
+    "RelativePath": "api/TaxExempteds",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taxExempted",
+        "Type": "HRIS_R62.Models.TaxExempted",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TaxExempted",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxExemptedsController",
+    "Method": "GetTaxExempted",
+    "RelativePath": "api/TaxExempteds/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TaxExempted",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxExemptedsController",
+    "Method": "PutTaxExempted",
+    "RelativePath": "api/TaxExempteds/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "taxExempted",
+        "Type": "HRIS_R62.Models.TaxExempted",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxExemptedsController",
+    "Method": "DeleteTaxExempted",
+    "RelativePath": "api/TaxExempteds/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxRuleController",
+    "Method": "GetTaxRules",
+    "RelativePath": "api/TaxRule",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.TaxRule, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxRuleController",
+    "Method": "PostTaxRule",
+    "RelativePath": "api/TaxRule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taxRule",
+        "Type": "HRIS_R62.Models.TaxRule",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TaxRule",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxRuleController",
+    "Method": "GetTaxRule",
+    "RelativePath": "api/TaxRule/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.TaxRule",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxRuleController",
+    "Method": "PutTaxRule",
+    "RelativePath": "api/TaxRule/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "taxRule",
+        "Type": "HRIS_R62.Models.TaxRule",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.TaxRuleController",
+    "Method": "DeleteTaxRule",
+    "RelativePath": "api/TaxRule/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.UnitsController",
+    "Method": "GetUnits",
+    "RelativePath": "api/Units",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.Models.Unit, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.UnitsController",
+    "Method": "GetUnit",
+    "RelativePath": "api/Units/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRIS_R62.Models.Unit",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.UnitsController",
+    "Method": "PutUnit",
+    "RelativePath": "api/Units/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "unit",
+        "Type": "HRIS_R62.Models.Unit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.UnitsController",
+    "Method": "CreateSp",
+    "RelativePath": "api/Units/sp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "uName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cmpId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRIS_R62.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRIS_R62.WeatherForecast, HRIS_R62, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

@@ -1,0 +1,98 @@
+<div class="container mt-4">
+  <h2>Salary Deduction Management</h2>
+
+  <div class="sticky-form bg-white p-3 rounded shadow-sm mb-4">
+<form (submit)="onSubmit()" class="mb-3">
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="salaryDeductionForm.salaryDeductionID" name="salaryDeductionID" class="form-control" placeholder="ID" required>
+      </div>
+      <div class="col-md-4">
+        <input type="number" [(ngModel)]="salaryDeductionForm.amount" name="amount" class="form-control" placeholder="Amount" required>
+      </div>
+      <div class="col-md-4">
+        <input type="date" [(ngModel)]="salaryDeductionForm.deductionDate" name="deductionDate" class="form-control" placeholder="Deduction Date">
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <input type="date" [(ngModel)]="salaryDeductionForm.activationDate" name="activationDate" class="form-control" placeholder="Activation Date">
+      </div>
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="salaryDeductionForm.reason" name="reason" class="form-control" placeholder="Reason">
+      </div>
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="salaryDeductionForm.localAreaClerance" name="localAreaClerance" class="form-control" placeholder="Local Area Clearance">
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="salaryDeductionForm.localAreaRemarks" name="localAreaRemarks" class="form-control" placeholder="Local Area Remarks">
+      </div>
+      <div class="col-md-4">
+        <input type="date" [(ngModel)]="salaryDeductionForm.approvedDate" name="approvedDate" class="form-control" placeholder="Approved Date">
+      </div>
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="salaryDeductionForm.entryUser" name="entryUser" class="form-control" placeholder="Entry User">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <input type="date" [(ngModel)]="salaryDeductionForm.entryDate" name="entryDate" class="form-control" placeholder="Entry Date">
+      </div>
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="salaryDeductionForm.employeeID" name="employeeID" class="form-control" placeholder="Employee ID">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" type="submit">
+          {{ isEdit ? 'Update' : 'Add' }}
+        </button>
+        <button class="btn btn-secondary ms-2" type="button" (click)="resetForm()">Clear</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+  
+
+  <table class="table table-bordered">
+    <thead class="table-dark" style="white-space: nowrap;">
+      <tr>
+        <th>ID</th>
+        <th>Amount</th>
+        <th>Deduction Date</th>
+        <th>Activation Date</th>
+        <th>Reason</th>
+        <th>Local Area Clearance</th>
+        <th>Remarks</th>
+        <th>Approved Date</th>
+        <th>Entry User</th>
+        <th>Entry Date</th>
+        <th>Employee ID</th>
+        <th style="width: 150px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of salaryDeduction">
+        <td>{{ item.salaryDeductionID }}</td>
+        <td>{{ item.amount }}</td>
+        <td>{{ item.deductionDate }}</td>
+        <td>{{ item.activationDate }}</td>
+        <td>{{ item.reason }}</td>
+        <td>{{ item.localAreaClerance }}</td>
+        <td>{{ item.localAreaRemarks }}</td>
+        <td>{{ item.approvedDate }}</td>
+        <td>{{ item.entryUser }}</td>
+        <td>{{ item.entryDate }}</td>
+        <td>{{ item.employeeID }}</td>
+        <td>
+          <button class="btn btn-sm btn-info me-2" (click)="editItem(item)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteItem(item.salaryDeductionID!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

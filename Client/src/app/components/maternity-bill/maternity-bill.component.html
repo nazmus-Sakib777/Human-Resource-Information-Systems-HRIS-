@@ -1,0 +1,158 @@
+ <mat-card>
+    <h2>Add Maternity Bill</h2>
+    <form (ngSubmit)="addMaternityBill()" #form="ngForm" class="mat-form">
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Maternity Bill ID</mat-label>
+            <input matInput [(ngModel)]="newConfig.maternityBillID" name="maternityBillID">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Maternity Configuration ID</mat-label>
+            <input matInput [(ngModel)]="newConfig.maternityConfigurationID" name="maternityConfigurationID">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Current Month</mat-label>
+            <input matInput [matDatepicker]="picker1" [(ngModel)]="newConfig.currentMonth" name="currentMonth">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>From Month</mat-label>
+            <input matInput [matDatepicker]="picker2" [(ngModel)]="newConfig.fromMonth" name="fromMonth">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>To Month</mat-label>
+            <input matInput [matDatepicker]="picker3" [(ngModel)]="newConfig.toMonth" name="toMonth">
+            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+            <mat-datepicker #picker3></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Number OfMonths</mat-label>
+            <input matInput [(ngModel)]="newConfig.numberOfMonths" name="numberOfMonths">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Basic Salary</mat-label>
+            <input matInput [(ngModel)]="newConfig.basicSalary" name="basicSalary">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Working Days</mat-label>
+            <input matInput [(ngModel)]="newConfig.workingDays" name="workingDays">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Actual Current Salary</mat-label>
+            <input matInput [(ngModel)]="newConfig.actualCurrentSalary" name="actualCurrentSalary">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Earned LeaveDays</mat-label>
+            <input matInput [(ngModel)]="newConfig.earnedLeaveDays" name="earnedLeaveDays">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Earned Leave Amount</mat-label>
+            <input matInput [(ngModel)]="newConfig.earnedLeaveAmount" name="earnedLeaveAmount">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Computed 3 Month NetPayable</mat-label>
+            <input matInput [(ngModel)]="newConfig.computed3MonthNetPayable" name="computed3MonthNetPayable">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Computed 3 Month Working Days</mat-label>
+            <input matInput [(ngModel)]="newConfig.computed3MonthWorkingDays" name="computed3MonthWorkingDays">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Actual Pay</mat-label>
+            <input matInput [(ngModel)]="newConfig.actualPay" name="actualPay">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Computed Pay</mat-label>
+            <input matInput [(ngModel)]="newConfig.computedPay" name="computedPay">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Actual Net Payable</mat-label>
+            <input matInput [(ngModel)]="newConfig.actualNetPayable" name="actualNetPayable">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Computed Net Payable</mat-label>
+            <input matInput [(ngModel)]="newConfig.computedNetPayable" name="maternityBillID">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Local Area Clerance</mat-label>
+            <input matInput [(ngModel)]="newConfig.localAreaClerance" name="localAreaClerance">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Local Area Remarks</mat-label>
+            <input matInput [(ngModel)]="newConfig.localAreaRemarks" name="localAreaRemarks">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Approved Date</mat-label>
+            <input matInput [matDatepicker]="picker4" [(ngModel)]="newConfig.approvedDate" name="approvedDate">
+            <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+            <mat-datepicker #picker4></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Entry Date</mat-label>
+            <input matInput [matDatepicker]="picker5" [(ngModel)]="newConfig.entryDate" name="entryDate">
+            <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+            <mat-datepicker #picker5></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="me-5">
+            <mat-label>Employee ID</mat-label>
+            <input matInput [(ngModel)]="newConfig.employeeID" name="employeeID">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Add Maternity Bill</button>
+
+    </form>
+</mat-card> 
+
+
+
+<mat-card>
+    <h2>Maternity Bill</h2>
+
+    <table mat-table [dataSource]="dataList" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="maternityBillID">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.maternityBillID}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="maternityConfigurationID">
+            <th mat-header-cell *matHeaderCellDef>Maternity Configuration ID</th>
+            <td mat-cell *matCellDef="let element"> {{element.maternityConfigurationID}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="currentMonth">
+            <th mat-header-cell *matHeaderCellDef>Current Month</th>
+            <td mat-cell *matCellDef="let element">{{element.currentMonth | date}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="fromMonth">
+            <th mat-header-cell *matHeaderCellDef>From Month</th>
+            <td mat-cell *matCellDef="let element">{{element.fromMonth | date}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="toMonth">
+            <th mat-header-cell *matHeaderCellDef>To Month</th>
+            <td mat-cell *matCellDef="let element">{{element.toMonth | date}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="numberOfMonths">
+            <th mat-header-cell *matHeaderCellDef>Number Of Months</th>
+            <td mat-cell *matCellDef="let element">{{element.numberOfMonths}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="basicSalary">
+            <th mat-header-cell *matHeaderCellDef>Basic Salary</th>
+            <td mat-cell *matCellDef="let element">{{element.basicSalary}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeID">
+            <th mat-header-cell *matHeaderCellDef>Employee ID</th>
+            <td mat-cell *matCellDef="let element">{{element.employeeID}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</mat-card>

@@ -1,0 +1,72 @@
+
+<h3>{{ isEdit ? 'Edit Grade' : 'Add New Grade' }}</h3>
+<form (ngSubmit)="onSubmit()" #gradeForm="ngForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Grade ID</mat-label>
+    <input matInput [(ngModel)]="grade.gradeID" name="gradeID" [readonly]="isEdit" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Short ID</mat-label>
+    <input matInput [(ngModel)]="grade.gradeShortID" name="shortID" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Grade Name</mat-label>
+    <input matInput [(ngModel)]="grade.gradeName" name="gradeName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>From Gross Salary</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.fromGrossSalary" name="fromGross" required min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>To Gross Salary</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.toGrossSalary" name="toGross" required min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Gross</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.gross" name="gross" required min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Basic</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.basic" name="basic" required min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>House Rent</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.houseRent" name="houseRent" required min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Medical</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.medical" name="medical" min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Conveyance</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.conveyanceAllowance" name="conveyance" required min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Lunch</mat-label>
+    <input matInput type="number" [(ngModel)]="grade.lunchAllowance" name="lunch" required min="0">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!gradeForm.form.valid">
+    {{ isEdit ? 'Update' : 'Add' }}
+  </button>
+
+
+
+  <!--<div class="main-content">
+    <button mat-raised-button color="primary" type="submit" [disabled]="!gradeForm.form.valid">
+      {{ isEdit ? 'Update' : 'Add' }}
+    </button>-->
+  <!--</div>-->
+
+
+</form>

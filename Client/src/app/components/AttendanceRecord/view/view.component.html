@@ -1,0 +1,246 @@
+<mat-card class="mt-3 mb-3 p-3 mat-elevation-z3">
+  <!-- Center Aligned Add Record Button -->
+  <div class="mb-4 text-center">
+    <button mat-raised-button color="primary" [routerLink]="['/attendance/create']">
+      <mat-icon class="me-2">add_circle</mat-icon> Add Attendance Record
+    </button>
+  </div>
+
+  <div class="table-responsive">
+    <table mat-table [dataSource]="attendanceRecords" class="mat-elevation-z2 mat-table" matSort>
+
+      <!-- Serial No Column -->
+      <ng-container matColumnDef="sl">
+        <th mat-header-cell *matHeaderCellDef> # </th>
+        <td mat-cell *matCellDef="let r; let i = index"> {{ i + 1 }} </td>
+      </ng-container>
+
+      <!-- Date -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let r"> {{ r.attendanceDate | date: 'dd MMM yyyy' }} </td>
+      </ng-container>
+
+      <!-- In Time -->
+      <ng-container matColumnDef="inTime">
+        <th mat-header-cell *matHeaderCellDef> In Time </th>
+        <td mat-cell *matCellDef="let r"> {{ r.inTime }} </td>
+      </ng-container>
+
+      <!-- Out Time -->
+      <ng-container matColumnDef="outTime">
+        <th mat-header-cell *matHeaderCellDef> Out Time </th>
+        <td mat-cell *matCellDef="let r"> {{ r.outTime }} </td>
+      </ng-container>
+
+      <!-- OT Start -->
+      <ng-container matColumnDef="otStart">
+        <th mat-header-cell *matHeaderCellDef> OT Start </th>
+        <td mat-cell *matCellDef="let r"> {{ r.otStart }} </td>
+      </ng-container>
+
+      <!-- OT End -->
+      <ng-container matColumnDef="otEnd">
+        <th mat-header-cell *matHeaderCellDef> OT End </th>
+        <td mat-cell *matCellDef="let r"> {{ r.otEnd }} </td>
+      </ng-container>
+
+      <!-- Regular Hours -->
+      <ng-container matColumnDef="regularHours">
+        <th mat-header-cell *matHeaderCellDef> Regular Hours </th>
+        <td mat-cell *matCellDef="let r"> {{ r.totalRegularHours }} </td>
+      </ng-container>
+
+      <!-- Overtime -->
+      <ng-container matColumnDef="overtime">
+        <th mat-header-cell *matHeaderCellDef> Overtime </th>
+        <td mat-cell *matCellDef="let r"> {{ r.totalOvertimeHours }} </td>
+      </ng-container>
+
+      <!-- Day Type -->
+      <ng-container matColumnDef="dayType">
+        <th mat-header-cell *matHeaderCellDef> Day Type </th>
+        <td mat-cell *matCellDef="let r"> {{ r.dayType }} </td>
+      </ng-container>
+
+      <!-- Actions -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let r">
+          <button mat-icon-button color="primary" (click)="edit(r.attendanceRecordID)" matTooltip="Edit">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="delete(r.attendanceRecordID)" matTooltip="Delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</mat-card>
+
+
+
+
+
+<!--<a class="btn btn-primary mb-3" [routerLink]="['/attendance/create']">
+  <i class="bi bi-plus-circle me-1 mt-2"></i> Add Record
+</a>
+
+<div class="table-responsive shadow rounded">
+  <table class=" table table-bordered table-striped table-hover align-middle text-center">
+    <thead class=" text-dark table-primary">
+      <tr>
+        <th><i class="bi bi-hash"></i> #</th>
+        <th><i class="bi bi-calendar-event"></i> Date</th>
+        <th><i class="bi bi-box-arrow-in-right"></i> In Time</th>
+        <th><i class="bi bi-box-arrow-left"></i> Out Time</th>
+        <th><i class="bi bi-hourglass-split"></i> OT Start</th>
+        <th><i class="bi bi-hourglass-top"></i> OT End</th>
+        <th><i class="bi bi-clock-history"></i> Regular Hours</th>
+        <th><i class="bi bi-stopwatch"></i> Overtime</th>
+        <th><i class="bi bi-calendar2-week"></i> Day Type</th>-->
+<!--<th>Status</th>-->
+<!--<th><i class="bi bi-gear"></i> Actions</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let r of attendanceRecords; index as i">
+    <td>{{ i + 1 }}</td>
+    <td>{{ r.attendanceDate | date: 'dd MMM yyyy' }}</td>
+    <td>{{ r.inTime }}</td>
+    <td>{{ r.outTime }}</td>
+    <td>{{ r.otStart }}</td>
+    <td>{{ r.otEnd }}</td>
+    <td>{{ r.totalRegularHours }}</td>
+    <td>{{ r.totalOvertimeHours }}</td>
+    <td>{{ r.dayType }}</td>-->
+<!--<td>{{ r.attendanceStatus?.statusName }}</td>-->
+<!--<td>
+          <div class="btn-group">
+            <button class="btn btn-sm btn-outline-info" (click)="edit(r.attendanceRecordID)">
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger" (click)="delete(r.attendanceRecordID)">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+<!--<a class="btn btn-primary mb-3" [routerLink]="['/create']">
+  <i class="bi bi-plus-circle me-1"></i> Add Record
+</a>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover align-middle text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>In Time</th>
+        <th>Out Time</th>
+        <th>Day Type</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of attendanceRecords; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ r.attendanceDate }}</td>
+        <td>{{ r.inTime }}</td>
+        <td>{{ r.outTime }}</td>
+        <td>{{ r.dayType }}</td>
+        <td>{{ r.attendanceStatus?.statusName }}</td>
+        <td>
+          <div class="btn-group">
+            <button class="btn btn-sm btn-info" (click)="edit(r.attendanceRecordID)">
+              <i class="bi bi-pencil-square"></i> Edit
+            </button>&nbsp;
+            <button class="btn btn-sm btn-danger" (click)="delete(r.attendanceRecordID)">
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+<!--{{attendanceRecords|json}}-->
+<!--<div class="container mt-4">
+  <h3 class="mb-3">Attendance Records</h3>
+
+  <table class="table table-bordered table-striped table-hover table-responsive">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>In Time</th>
+        <th>Out Time</th>
+        <th>OT Start</th>
+        <th>OT End</th>
+        <th>Regular Hours</th>
+        <th>OT Hours</th>
+        <th>Day Type</th>
+        <th>Status</th>
+        <th>Status Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of attendanceRecords; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ record.attendanceDate }}</td>
+        <td>{{ record.inTime }}</td>
+        <td>{{ record.outTime }}</td>
+        <td>{{ record.otStart }}</td>
+        <td>{{ record.otEnd }}</td>
+        <td>{{ record.totalRegularHours }}</td>
+        <td>{{ record.totalOvertimeHours }}</td>
+        <td>{{ record.dayType }}</td>
+        <td>{{ record.attendanceStatus?.statusName }}</td>
+        <td>{{ record.attendanceStatus?.statusShortName }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="attendanceRecords.length === 0" class="alert alert-warning mt-3">
+    No records found.
+  </div>
+</div>-->
+<!--routerLink="/attendance-records/create-->
+<!--<a class="btn btn-primary mb-3" [routerLink]="['/create']">add record</a>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>In Time</th>
+      <th>Out Time</th>
+      <th>Day Type</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of attendanceRecords; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ r.attendanceDate }}</td>
+      <td>{{ r.inTime }}</td>
+      <td>{{ r.outTime }}</td>
+      <td>{{ r.dayType }}</td>
+      <td>{{ r.attendanceStatus?.statusName }}</td>
+      <td>
+        <button class="btn btn-sm btn-info" (click)="edit(r.attendanceRecordID)">Edit</button>
+        <button class="btn btn-sm btn-danger" (click)="delete(r.attendanceRecordID)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>-->

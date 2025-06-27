@@ -1,43 +1,87 @@
-<!-- ✅ Bootstrap Navbar with Icons -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Employee Modules</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a routerLink="/job-left" class="nav-link">
-            <i class="bi bi-person-dash"></i> Job Left
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/employment-type" class="nav-link">
-            <i class="bi bi-briefcase"></i> Employment Type
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/suspend" class="nav-link">
-            <i class="bi bi-exclamation-triangle"></i> Suspend
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/special-employee" class="nav-link">
-            <i class="bi bi-person-check"></i> Special Employee
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/shift-time" class="nav-link">
-            <i class="bi bi-clock-history"></i> Shift Time
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<mat-toolbar class="glass-toolbar mat-elevation-z6">
+  <span class="toolbar-title"><mat-icon>bolt</mat-icon> HRIS</span>
+  <span class="spacer"></span>
 
-<!-- Page Content -->
-<div class="container mt-4">
+  <!-- Home button (no dropdown) -->
+  <!-- <button mat-button routerLink="home" routerLinkActive="active"><mat-icon>home</mat-icon> Home</button> -->
+  <!-- Nokib -->
+  <!-- Employee Dropdown -->
+  <button mat-button
+    [matMenuTriggerFor]="employeeMenu"><mat-icon>more_vert</mat-icon><mat-icon>people</mat-icon>Employee</button>
+  <mat-menu #employeeMenu="matMenu"><button mat-menu-item routerLink="/employees"><mat-icon>people</mat-icon>
+      Employee</button>
+    <button mat-menu-item routerLink="/grades"><mat-icon>school</mat-icon> Grade</button></mat-menu>
+
+  <!-- Mofizul -->
+  <!-- Salary & Payroll Dropdown -->
+  <button mat-button [matMenuTriggerFor]="salaryMenu"><mat-icon>more_vert</mat-icon><mat-icon>attach_money</mat-icon>
+    Salary & Payroll</button>
+  <mat-menu #salaryMenu="matMenu">
+    <button mat-menu-item routerLink="/salarygrade"><mat-icon>attach_money</mat-icon> Salary Grade</button>
+    <button mat-menu-item routerLink="/salaryDeduction"><mat-icon>remove_circle</mat-icon> Salary Deduction</button>
+    <button mat-menu-item routerLink="/salaryEntry"><mat-icon>edit</mat-icon> Salary Entry</button>
+    <button mat-menu-item routerLink="/salaryProcess"><mat-icon>settings</mat-icon> Salary Process</button>
+    <button mat-menu-item routerLink="/bonusRecord"><mat-icon>card_giftcard</mat-icon> Bonus Record</button>
+    <button mat-menu-item routerLink="/salaryRecord"><mat-icon>description</mat-icon> Salary Record</button>
+    <button mat-menu-item routerLink="/multipleAtt"><mat-icon>groups</mat-icon> Multiple Attendance</button>
+  </mat-menu>
+  <!-- Jasmin -->
+  <!-- Maternity & Leave Dropdown -->
+  <button mat-button [matMenuTriggerFor]="maternityMenu"><mat-icon>more_vert</mat-icon><mat-icon>favorite</mat-icon>
+    Maternity & Leave</button>
+  <mat-menu #maternityMenu="matMenu">
+    <button mat-menu-item routerLink="/MaternityConfiguration"><mat-icon>settings</mat-icon> Maternity Config</button>
+    <button mat-menu-item routerLink="/MaternityBill"><mat-icon>receipt_long</mat-icon> Maternity Bill</button>
+    <button mat-menu-item routerLink="/LeaveRecord"><mat-icon>event_note</mat-icon> Leave Records</button>
+    <button mat-menu-item routerLink="/LeaveApproval"><mat-icon>check_circle</mat-icon> Leave Approvals</button>
+    <button mat-menu-item routerLink="/LeaveEncashment"><mat-icon>paid</mat-icon> Leave Encashment</button>
+  </mat-menu>
+
+  <!-- Tofayel -->
+  <button mat-button
+    [matMenuTriggerFor]="attendanceMenu"><mat-icon>more_vert</mat-icon><mat-icon>event</mat-icon>Attendance</button>
+  <mat-menu #attendanceMenu="matMenu">
+    <button mat-menu-item routerLink="/attendance/view"><mat-icon>event</mat-icon> AttendanceRecord</button>
+    <button mat-menu-item routerLink="/tax/view"><mat-icon>attach_money</mat-icon> TaxAmount</button>
+    <button mat-menu-item routerLink="/attendance-configurations"><mat-icon>tune</mat-icon>
+      AttendanceConfiguration</button>
+    <button mat-menu-item routerLink="/tax-exempted"><mat-icon>money_off</mat-icon> TaxExempted</button>
+  </mat-menu>
+
+
+  <!-- Sakib -->
+
+  <button mat-button [matMenuTriggerFor]="employeemodMenu">
+    <mat-icon>work</mat-icon>
+    Employee Modules
+  </button>
+
+  <mat-menu #employeemodMenu="matMenu">
+    <button mat-menu-item routerLink="/job-left">
+      <mat-icon>person_off</mat-icon>
+      Job Left
+    </button>
+    <button mat-menu-item routerLink="/employment-type">
+      <mat-icon>business_center</mat-icon>
+      Employment Type
+    </button>
+    <button mat-menu-item routerLink="/suspend">
+      <mat-icon>report_problem</mat-icon>
+      Suspend
+    </button>
+    <button mat-menu-item routerLink="/special-employee">
+      <mat-icon>person_add</mat-icon>
+      Special Employee
+    </button>
+    <button mat-menu-item routerLink="/shift-time">
+      <mat-icon>schedule</mat-icon>
+      Shift Time
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="main-content container mt-4">
+
   <router-outlet></router-outlet>
+
 </div>

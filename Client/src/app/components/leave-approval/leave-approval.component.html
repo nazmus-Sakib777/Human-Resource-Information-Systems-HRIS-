@@ -1,0 +1,173 @@
+<div class="container">
+    <form (ngSubmit)="addLeaveApproval()" #form="ngForm">
+        <div class="row">
+            <h2>Add Leave Approval</h2>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="leaveApprovalID" class="form-label">Leave Approval ID</label>
+                    <input type="text" class="form-control" id="leaveApprovalID" name="leaveApprovalID"
+                        [(ngModel)]="newConfig.leaveApprovalID" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="leaveName" class="form-label">Leave Name</label>
+                    <input type="text" class="form-control" id="leaveName" name="leaveName"
+                        [(ngModel)]="newConfig.leaveName" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="leaveFromDate" class="form-label">Leave From Date</label>
+                    <input type="date" class="form-control" id="leaveFromDate" name="leaveFromDate"
+                        [(ngModel)]="newConfig.leaveFromDate" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="leaveToDate" class="form-label">Leave To Date</label>
+                    <input type="date" class="form-control" id="leaveToDate" name="leaveToDate"
+                        [(ngModel)]="newConfig.leaveToDate" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="remarks" class="form-label">Remarks</label>
+                    <input type="text" class="form-control" id="remarks" name="remarks"
+                        [(ngModel)]="newConfig.remarks" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="localAreaClerance" class="form-label">Local Area Clerance</label>
+                    <input type="text" class="form-control" id="localAreaClerance" name="localAreaClerance"
+                        [(ngModel)]="newConfig.localAreaClerance" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="localAreaRemarks" class="form-label">Local Area Remarks</label>
+                    <input type="text" class="form-control" id="localAreaRemarks" name="localAreaRemarks"
+                        [(ngModel)]="newConfig.localAreaRemarks" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="approvedDate" class="form-label">Approved Date</label>
+                    <input type="date" class="form-control" id="approvedDate" name="approvedDate"
+                        [(ngModel)]="newConfig.approvedDate" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="entryUser" class="form-label">EntryUser</label>
+                    <input type="text" class="form-control" id="entryUser" name="entryUser"
+                        [(ngModel)]="newConfig.entryUser" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="leaveEnjoyed" class="form-label">Leave Enjoyed</label>
+                    <input type="text" class="form-control" id="leaveEnjoyed" name="leaveEnjoyed"
+                        [(ngModel)]="newConfig.leaveEnjoyed" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="totalLeave" class="form-label">Total Leave</label>
+                    <input type="text" class="form-control" id="totalLeave" name="totalLeave"
+                        [(ngModel)]="newConfig.totalLeave" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="leaveYear" class="form-label">Leave Year</label>
+                    <input type="text" class="form-control" id="leaveYear" name="leaveYear"
+                        [(ngModel)]="newConfig.leaveYear" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="providedLeave" class="form-label">Provided Leave</label>
+                    <input type="text" class="form-control" id="providedLeave" name="providedLeave"
+                        [(ngModel)]="newConfig.providedLeave" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-2">
+                    <label for="employeeID" class="form-label">Employee ID</label>
+                    <input type="text" class="form-control" id="employeeID" name="employeeID"
+                        [(ngModel)]="newConfig.employeeID" />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary m-2" [disabled]="form.invalid">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+
+<mat-card>
+    <h2>Leave Approval</h2>
+    <table mat-table [dataSource]="dataList" class="mat-elevation-z8">
+        <ng-container matColumnDef="leaveApprovalID">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveApprovalID}}</td>
+        </ng-container>
+        <ng-container matColumnDef="leaveName">
+            <th mat-header-cell *matHeaderCellDef>Leave Name</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveName}}</td>
+        </ng-container>
+        <ng-container matColumnDef="leaveFromDate">
+            <th mat-header-cell *matHeaderCellDef>Leave From Date</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveFromDate}}</td>
+        </ng-container>
+        <ng-container matColumnDef="leaveToDate">
+            <th mat-header-cell *matHeaderCellDef>Leave To Date</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveToDate}}</td>
+        </ng-container>
+        <ng-container matColumnDef="remarks">
+            <th mat-header-cell *matHeaderCellDef>Remarks</th>
+            <td mat.cell *matCellDef="let element">{{element.remarks}}</td>
+        </ng-container>
+        <ng-container matColumnDef="localAreaClerance">
+            <th mat-header-cell *matHeaderCellDef>Local Area Clerance</th>
+            <td mat.cell *matCellDef="let element">{{element.localAreaClerance}}</td>
+        </ng-container>
+        <ng-container matColumnDef="localAreaRemarks">
+            <th mat-header-cell *matHeaderCellDef>Local Area Remarks</th>
+            <td mat.cell *matCellDef="let element">{{element.localAreaRemarks}}</td>
+        </ng-container>
+        <ng-container matColumnDef="approvedDate">
+            <th mat-header-cell *matHeaderCellDef>Approved Date</th>
+            <td mat.cell *matCellDef="let element">{{element.approvedDate}}</td>
+        </ng-container>
+        <ng-container matColumnDef="entryUser">
+            <th mat-header-cell *matHeaderCellDef>Entry User</th>
+            <td mat.cell *matCellDef="let element">{{element.entryUser}}</td>
+        </ng-container>
+        <ng-container matColumnDef="leaveEnjoyed">
+            <th mat-header-cell *matHeaderCellDef>Leave Enjoyed</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveEnjoyed}}</td>
+        </ng-container>
+        <ng-container matColumnDef="totalLeave">
+            <th mat-header-cell *matHeaderCellDef>Total Leave</th>
+            <td mat.cell *matCellDef="let element">{{element.totalLeave}}</td>
+        </ng-container>
+        <ng-container matColumnDef="leaveYear">
+            <th mat-header-cell *matHeaderCellDef>Leave Year</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveYear}}</td>
+        </ng-container>
+        <ng-container matColumnDef="providedLeave">
+            <th mat-header-cell *matHeaderCellDef>Provided Leave</th>
+            <td mat.cell *matCellDef="let element">{{element.providedLeave}}</td>
+        </ng-container>
+        <ng-container matColumnDef="employeeID">
+            <th mat-header-cell *matHeaderCellDef>Employee ID</th>
+            <td mat.cell *matCellDef="let element">{{element.employeeID}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</mat-card>

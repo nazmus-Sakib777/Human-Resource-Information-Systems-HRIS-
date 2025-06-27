@@ -1,0 +1,231 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form (ngSubmit)="addLeaveEncashment()" #form="ngForm">
+                <div class="row">
+                    <h2>Add Leave Encashment</h2>
+                    <div class="col-12">
+                        <div class="mb-2">
+                            <label for="leaveEncashmentID" class="form-label">Leave Encashment ID</label>
+                            <input type="text" class="form-control" id="leaveEncashmentID" name="leaveEncashmentID"
+                                [(ngModel)]="newConfig.leaveEncashmentID" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="encashMonth" class="form-label">Encash Month</label>
+                            <input type="text" class="form-control" id="encashMonth" name="encashMonth"
+                                [(ngModel)]="newConfig.encashMonth" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="encashYear" class="form-label">Encash Year</label>
+                            <input type="text" class="form-control" id="encashYear" name="encashYear"
+                                [(ngModel)]="newConfig.encashYear" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="basicSalary" class="form-label">Basic Salary</label>
+                            <input type="number" class="form-control" id="basicSalary" name="basicSalary"
+                                [(ngModel)]="newConfig.basicSalary" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="actualDays" class="form-label">Actual Days</label>
+                            <input type="text" class="form-control" id="actualDays" name="actualDays"
+                                [(ngModel)]="newConfig.actualDays" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="computedDays" class="form-label">Computed Days</label>
+                            <input type="text" class="form-control" id="computedDays" name="computedDays"
+                                [(ngModel)]="newConfig.computedDays" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="leaveEncashAmount" class="form-label">LeaveEncash Amount</label>
+                            <input type="number" class="form-control" id="leaveEncashAmount" name="leaveEncashAmount"
+                                [(ngModel)]="newConfig.leaveEncashAmount" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="otherDeductions" class="form-label">Other Deductions</label>
+                            <input type="number" class="form-control" id="otherDeductions" name="otherDeductions"
+                                [(ngModel)]="newConfig.otherDeductions" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="actualEncashAmount" class="form-label">Actual Encash Amount</label>
+                            <input type="number" class="form-control" id="actualEncashAmount" name="actualEncashAmount"
+                                [(ngModel)]="newConfig.actualEncashAmount" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="computedEncashAmount" class="form-label">Computed Encash Amount</label>
+                            <input type="number" class="form-control" id="computedEncashAmount"
+                                name="computedEncashAmount" [(ngModel)]="newConfig.computedEncashAmount" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="localAreaClerance" class="form-label">Local Area Clerance</label>
+                            <input type="text" class="form-control" id="localAreaClerance" name="localAreaClerance"
+                                [(ngModel)]="newConfig.localAreaClerance" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="localAreaRemarks" class="form-label">Local Area Remarks</label>
+                            <input type="text" class="form-control" id="localAreaRemarks" name="localAreaRemarks"
+                                [(ngModel)]="newConfig.localAreaRemarks" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="approvedDate" class="form-label">Approved Date</label>
+                            <input type="date" class="form-control" id="approvedDate" name="approvedDate"
+                                [(ngModel)]="newConfig.approvedDate" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="lastMonthWorkingDays" class="form-label">Last Month Working Days</label>
+                            <input type="number" class="form-control" id="lastMonthWorkingDays"
+                                name="lastMonthWorkingDays" [(ngModel)]="newConfig.lastMonthWorkingDays" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-2">
+                            <label for="employeeID" class="form-label">Employee ID</label>
+                            <input type="text" class="form-control" id="employeeID" name="employeeID"
+                                [(ngModel)]="newConfig.employeeID" />
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary m-2" [disabled]="form.invalid">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <h2>Leave Encashment Rate</h2>
+            <div class="mt-5">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Rate ID</th>
+                            <th>To Gross Salary</th>
+                            <th>Rate (%)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rate of newConfig.leaveEncashmentRates; let i = index">
+                            <td>
+                                <input type="text" [(ngModel)]="rate.leaveEncashmentRateID" name="rateID{{ i }}"
+                                    class="form-control" />
+                            </td>
+                            <td>
+                                <input type="number" [(ngModel)]="rate.toGrossSalary" name="grossSalary{{ i }}"
+                                    class="form-control" />
+                            </td>
+                            <td>
+                                <input type="number" [(ngModel)]="rate.rateInPercent" name="ratePercent{{ i }}"
+                                    class="form-control" />
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" (click)="removeRate(i)">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-primary mt-2" style="width: 100%;" (click)="addRate()">Add Rate</button>
+        </div>
+    </div>
+</div>
+
+<mat-card>
+    <h2 mat-card-title>Leave Encashment</h2>
+    <table mat-table [dataSource]="dataList" class="mat-elevation-z8">
+        <ng-container matColumnDef="leaveEncashmentID">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveEncashmentID}}</td>
+        </ng-container>
+        <ng-container matColumnDef="encashMonth">
+            <th mat-header-cell *matHeaderCellDef>EncashMonth</th>
+            <td mat.cell *matCellDef="let element">{{element.encashMonth}}</td>
+        </ng-container>
+        <ng-container matColumnDef="encashYear">
+            <th mat-header-cell *matHeaderCellDef>EncashYear</th>
+            <td mat.cell *matCellDef="let element">{{element.encashYear}}</td>
+        </ng-container>
+        <ng-container matColumnDef="basicSalary">
+            <th mat-header-cell *matHeaderCellDef>BasicSalary</th>
+            <td mat.cell *matCellDef="let element">{{element.basicSalary}}</td>
+        </ng-container>
+        <ng-container matColumnDef="actualDays">
+            <th mat-header-cell *matHeaderCellDef>ActualDays</th>
+            <td mat.cell *matCellDef="let element">{{element.actualDays}}</td>
+        </ng-container>
+        <ng-container matColumnDef="computedDays">
+            <th mat-header-cell *matHeaderCellDef>ComputedDays</th>
+            <td mat.cell *matCellDef="let element">{{element.computedDays}}</td>
+        </ng-container>
+        <ng-container matColumnDef="leaveEncashAmount">
+            <th mat-header-cell *matHeaderCellDef>LeaveEncashAmount</th>
+            <td mat.cell *matCellDef="let element">{{element.leaveEncashAmount}}</td>
+        </ng-container>
+        <ng-container matColumnDef="otherDeductions">
+            <th mat-header-cell *matHeaderCellDef>OtherDeductions</th>
+            <td mat.cell *matCellDef="let element">{{element.otherDeductions}}</td>
+        </ng-container>
+        <ng-container matColumnDef="actualEncashAmount">
+            <th mat-header-cell *matHeaderCellDef>ActualEncashAmount</th>
+            <td mat.cell *matCellDef="let element">{{element.actualEncashAmount}}</td>
+        </ng-container>
+        <ng-container matColumnDef="computedEncashAmount">
+            <th mat-header-cell *matHeaderCellDef>ComputedEncashAmount</th>
+            <td mat.cell *matCellDef="let element">{{element.computedEncashAmount}}</td>
+        </ng-container>
+        <ng-container matColumnDef="localAreaClerance">
+            <th mat-header-cell *matHeaderCellDef>LocalAreaClerance</th>
+            <td mat.cell *matCellDef="let element">{{element.localAreaClerance}}</td>
+        </ng-container>
+        <ng-container matColumnDef="localAreaRemarks">
+            <th mat-header-cell *matHeaderCellDef>LocalAreaRemarks</th>
+            <td mat.cell *matCellDef="let element">{{element.localAreaRemarks}}</td>
+        </ng-container>
+        <ng-container matColumnDef="approvedDate">
+            <th mat-header-cell *matHeaderCellDef>ApprovedDate ID</th>
+            <td mat.cell *matCellDef="let element">{{element.approvedDate}}</td>
+        </ng-container>
+        <ng-container matColumnDef="lastMonthWorkingDays">
+            <th mat-header-cell *matHeaderCellDef>LastMonthWorkingDays</th>
+            <td mat.cell *matCellDef="let element">{{element.lastMonthWorkingDays}}</td>
+        </ng-container>
+        <ng-container matColumnDef="employeeID">
+            <th mat-header-cell *matHeaderCellDef>Employee ID</th>
+            <td mat.cell *matCellDef="let element">{{element.employeeID}}</td>
+        </ng-container>
+        <ng-container matColumnDef="details">
+            <th mat-header-cell *matHeaderCellDef>Details</th>
+            <td mat-cell *matCellDef="let element">
+                <button class="btn btn-outline-primary" (click)="openDetailsDialog(element)">Details</button>
+            </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</mat-card>

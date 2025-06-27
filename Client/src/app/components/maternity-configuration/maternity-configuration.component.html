@@ -1,0 +1,158 @@
+<mat-tab-group #tabGroup>
+  <mat-tab label="Add">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card mt-5">
+            <div class="card-body">
+              <form (ngSubmit)="addMaternityConfig()" #form="ngForm" class="mat-form">
+                <mat-form-field appearance="fill" class="me-5">
+                  <mat-label>Maternity Config ID</mat-label>
+                  <input matInput [(ngModel)]="newConfig.maternityConfigurationID" name="maternityConfigurationID"
+                    required>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Joining Date</mat-label>
+                  <input matInput [matDatepicker]="picker1" [(ngModel)]="newConfig.joiningDate" name="joiningDate">
+                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                  <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="me-5">
+                  <mat-label>Last Withdrawal Date</mat-label>
+                  <input matInput [matDatepicker]="picker2" [(ngModel)]="newConfig.lastWithdrawalDate"
+                    name="lastWithdrawalDate">
+                  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                  <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Installment Type</mat-label>
+                  <input matInput [(ngModel)]="newConfig.installmentType" name="installmentType">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="me-5">
+                  <mat-label>Next Withdrawable Time (months)</mat-label>
+                  <input matInput type="number" [(ngModel)]="newConfig.nextWithdrawableTime"
+                    name="nextWithdrawableTime">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Current Withdrawal Date</mat-label>
+                  <input matInput [matDatepicker]="picker3" [(ngModel)]="newConfig.currentWithdrawalDate"
+                    name="currentWithdrawalDate">
+                  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                  <mat-datepicker #picker3></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="me-5">
+                  <mat-label>Status</mat-label>
+                  <input matInput [(ngModel)]="newConfig.status" name="status">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Employee ID</mat-label>
+                  <input matInput [(ngModel)]="newConfig.employeeID" name="employeeID">
+                </mat-form-field>
+
+                <mat-checkbox [(ngModel)]="newConfig.isEligible" name="isEligible">Is Eligible</mat-checkbox>
+
+                <!-- <button mat-raised-button color="warning" type="submit">Reset</button> -->
+                <button mat-raised-button color="primary" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+
+
+  <mat-tab label="View">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <mat-card>
+            <h2>Maternity Configurations</h2>
+
+            <table mat-table [dataSource]="dataList" class="mat-elevation-z8">
+
+              <!-- ID -->
+              <ng-container matColumnDef="maternityConfigurationID">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.maternityConfigurationID}} </td>
+              </ng-container>
+
+              <!-- Joining Date -->
+              <ng-container matColumnDef="joiningDate">
+                <th mat-header-cell *matHeaderCellDef> Joining Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.joiningDate | date}} </td>
+              </ng-container>
+
+              <!-- Eligible -->
+              <ng-container matColumnDef="isEligible">
+                <th mat-header-cell *matHeaderCellDef> Eligible </th>
+                <td mat-cell *matCellDef="let element"> {{element.isEligible ? 'Yes' : 'No'}} </td>
+              </ng-container>
+
+              <!-- Last Withdrawal -->
+              <ng-container matColumnDef="lastWithdrawalDate">
+                <th mat-header-cell *matHeaderCellDef> Last Withdrawal </th>
+                <td mat-cell *matCellDef="let element"> {{element.lastWithdrawalDate | date}} </td>
+              </ng-container>
+
+              <!-- Installment Type -->
+              <ng-container matColumnDef="installmentType">
+                <th mat-header-cell *matHeaderCellDef> Installment Type </th>
+                <td mat-cell *matCellDef="let element"> {{element.installmentType}} </td>
+              </ng-container>
+
+              <!-- Next Withdrawable -->
+              <ng-container matColumnDef="nextWithdrawableTime">
+                <th mat-header-cell *matHeaderCellDef> Next Withdrawable </th>
+                <td mat-cell *matCellDef="let element"> {{element.nextWithdrawableTime}} </td>
+              </ng-container>
+
+              <!-- Current Withdrawal -->
+              <ng-container matColumnDef="currentWithdrawalDate">
+                <th mat-header-cell *matHeaderCellDef> Current Withdrawal </th>
+                <td mat-cell *matCellDef="let element"> {{element.currentWithdrawalDate | date}} </td>
+              </ng-container>
+
+              <!-- Gap in Months -->
+              <ng-container matColumnDef="gapInMonths">
+                <th mat-header-cell *matHeaderCellDef> Gap (Months) </th>
+                <td mat-cell *matCellDef="let element"> {{element.gapInMonths}} </td>
+              </ng-container>
+
+              <!-- Status -->
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+              </ng-container>
+
+              <!-- Employee ID -->
+              <ng-container matColumnDef="employeeID">
+                <th mat-header-cell *matHeaderCellDef> Employee ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.employeeID}} </td>
+              </ng-container>
+              <!-- <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>Action</th>
+                <td mat.cell *matCellDef="let element">
+                  <button type="button" class="btn btn-outline-primary"
+                    (click)="editMaternityConfig(element)">Edit</button>
+                </td>
+              </ng-container>  -->
+              
+              <!-- Table rows -->
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,492 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Employee ID</mat-label>
+    <input matInput formControlName="employeeID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Is Line Selected</mat-label>
+    <input matInput formControlName="isLineSelected" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Line ID</mat-label>
+    <input matInput formControlName="lineID" />
+  </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Employee Name</mat-label>
+    <input matInput formControlName="employeeName" required />
+    <mat-error *ngIf="employeeForm.get('employeeName')?.hasError('required')">
+      Name is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Local Name</mat-label>
+    <input matInput formControlName="employeeNameLocal" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Company ID</mat-label>
+    <input matInput formControlName="companyID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Unit ID</mat-label>
+    <input matInput formControlName="unitID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Division ID</mat-label>
+    <input matInput formControlName="divisionID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Department ID</mat-label>
+    <input matInput formControlName="departmentID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Section ID</mat-label>
+    <input matInput formControlName="sectionID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Designation ID</mat-label>
+    <input matInput formControlName="designationID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Grade ID</mat-label>
+    <input matInput formControlName="gradeID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Shift Employee ID</mat-label>
+    <input matInput formControlName="shiftEmployeeID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Attendance Record ID</mat-label>
+    <input matInput formControlName="attendanceRecordID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Is OT Allowed</mat-label>
+    <input matInput formControlName="isOTAllowed" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Gender</mat-label>
+    <input matInput formControlName="gender" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>IDentification Mark</mat-label>
+    <input matInput formControlName="iDentificationMark" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Employment TypeID</mat-label>
+    <input matInput formControlName="employmentTypeID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Present Address</mat-label>
+    <input matInput formControlName="presentAddress" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Permanent Address</mat-label>
+    <input matInput formControlName="permanentAddress" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Telephone</mat-label>
+    <input matInput formControlName="telephone" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mobile Number</mat-label>
+    <input matInput formControlName="mobileNumber" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+    <mat-error *ngIf="employeeForm.get('email')?.hasError('email')">
+      Invalid email
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>National ID Number</mat-label>
+    <input matInput formControlName="nationalIDNumber" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Is Mobile Banking</mat-label>
+    <input matInput formControlName="isMobileBanking" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Account Number</mat-label>
+    <input matInput formControlName="accountNumber" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Bank Name</mat-label>
+    <input matInput formControlName="bankName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Father Name</mat-label>
+    <input matInput formControlName="fatherName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Father Name Local</mat-label>
+    <input matInput formControlName="fatherNameLocal" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Father Occupation</mat-label>
+    <input matInput formControlName="fatherOccupation" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mother Name</mat-label>
+    <input matInput formControlName="motherName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mother Name Local</mat-label>
+    <input matInput formControlName="motherNameLocal" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mother Occupation</mat-label>
+    <input matInput formControlName="motherOccupation" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Date Of Birth</mat-label>
+    <input matInput formControlName="dateOfBirth" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Place Of Birth</mat-label>
+    <input matInput formControlName="placeOfBirth" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>District Of Birth</mat-label>
+    <input matInput formControlName="districtOfBirth" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nationality</mat-label>
+    <input matInput formControlName="nationality" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Religion</mat-label>
+    <input matInput formControlName="religion" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Blood Group</mat-label>
+    <input matInput formControlName="bloodGroup" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Age</mat-label>
+    <input matInput formControlName="age" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Marital Status</mat-label>
+    <input matInput formControlName="maritalStatus" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Date Of Marriage</mat-label>
+    <input matInput formControlName="dateOfMarriage" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>AppointmentType</mat-label>
+    <input matInput formControlName="appointmentType" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Joining Date</mat-label>
+    <input matInput formControlName="joiningDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Posting Date</mat-label>
+    <input matInput formControlName="postingDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Confirmation Date</mat-label>
+    <input matInput formControlName="confirmationDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Retirement Date</mat-label>
+    <input matInput formControlName="retirementDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Service Length</mat-label>
+    <input matInput formControlName="serviceLength" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Spouse Name</mat-label>
+    <input matInput formControlName="spouseName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Spouse Occupation</mat-label>
+    <input matInput formControlName="spouseOccupation" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Spouse Date Of Birth</mat-label>
+    <input matInput formControlName="spouseDateOfBirth" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Spouse Blood Group</mat-label>
+    <input matInput formControlName="spouseBloodGroup" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Salary RecordID</mat-label>
+    <input matInput formControlName="salaryRecordID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Current Salary</mat-label>
+    <input matInput formControlName="currentSalary" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>salary At Joining</mat-label>
+    <input matInput formControlName="salaryAtJoining" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Salary GradeID</mat-label>
+    <input matInput formControlName="salaryGradeID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>SalaryStepID</mat-label>
+    <input matInput formControlName="salaryStepID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Passport Number</mat-label>
+    <input matInput formControlName="passportNumber" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Passport Issue Date</mat-label>
+    <input matInput formControlName="passportIssueDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Passport Expiry Date</mat-label>
+    <input matInput formControlName="passportExpiryDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Passport Issue Place</mat-label>
+    <input matInput formControlName="passportIssuePlace" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Passport Issue Authority</mat-label>
+    <input matInput formControlName="passportIssueAuthority" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>License Number</mat-label>
+    <input matInput formControlName="licenseNumber" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>License Issue Date</mat-label>
+    <input matInput formControlName="licenseIssueDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>License Expiry Date</mat-label>
+    <input matInput formControlName="licenseExpiryDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>License Issue Place</mat-label>
+    <input matInput formControlName="licenseIssuePlace" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>License Issue Authority</mat-label>
+    <input matInput formControlName="licenseIssueAuthority" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Membership Card Number</mat-label>
+    <input matInput formControlName="membershipCardNumber" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Association</mat-label>
+    <input matInput formControlName="association" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Membership Type</mat-label>
+    <input matInput formControlName="membershipType" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Membership Validity Date</mat-label>
+    <input matInput formControlName="membershipValIDityDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>ReferenceName1</mat-label>
+    <input matInput formControlName="referenceName1" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Address 1</mat-label>
+    <input matInput formControlName="referenceAddress1" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Phone 1</mat-label>
+    <input matInput formControlName="referencePhone1" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Occupation 1</mat-label>
+    <input matInput formControlName="referenceOccupation1" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Relation 1</mat-label>
+    <input matInput formControlName="referenceRelation1" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>ReferenceName2</mat-label>
+    <input matInput formControlName="referenceName2" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Address 2</mat-label>
+    <input matInput formControlName="referenceAddress2" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Phone 2</mat-label>
+    <input matInput formControlName="referencePhone2" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Occupation 2</mat-label>
+    <input matInput formControlName="referenceOccupation2" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Relation 2</mat-label>
+    <input matInput formControlName="referenceRelation2" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Local Area Clerance</mat-label>
+    <input matInput formControlName="localAreaClerance" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Local Area Remarks</mat-label>
+    <input matInput formControlName="localAreaRemarks" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Employee Photo</mat-label>
+    <input matInput formControlName="employeePhoto" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Employee Signature</mat-label>
+    <input matInput formControlName="employeeSignature" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>OldEmployeeID</mat-label>
+    <input matInput formControlName="oldEmployeeID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Previous EmployeeID</mat-label>
+    <input matInput formControlName="previousEmployeeID" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>WeeklyHoliDay</mat-label>
+    <input matInput formControlName="weeklyHoliDay" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Approved Date</mat-label>
+    <input matInput formControlName="approvedDate" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Employee Status</mat-label>
+    <input matInput formControlName="employeeStatus" />
+  </mat-form-field>
+
+
+
+
+  <!--</mat-form-field>-->
+
+  <button mat-raised-button color="primary" type="submit">
+    {{ isEdit ? 'Update' : 'Save' }}
+  </button>
+</form>
+
+<mat-table [dataSource]="employees" class="mat-elevation-z8">
+  <ng-container matColumnDef="employeeID">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.employeeID }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="employeeName">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.employeeName }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-button (click)="editEmployee(element)">Edit</button>
+      <button mat-button color="warn" (click)="deleteEmployee(element.employeeID)">Delete</button>
+    </mat-cell>
+  </ng-container>
+
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+

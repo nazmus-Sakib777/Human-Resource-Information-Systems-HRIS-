@@ -1,0 +1,148 @@
+
+
+
+<div class="container" style="max-width: 1200px; margin: 20px auto; padding: 0 20px;">
+  <h2 class="text-center text-primary mb-4">Attendance Configurations</h2>
+
+   <!--Form-->
+  <form (ngSubmit)="save()" #f="ngForm" style="margin-bottom: 30px;">
+    <mat-card>
+      <mat-card-content>
+        <div class="form-row" style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <mat-form-field appearance="fill" style="flex: 1 1 200px;">
+            <mat-label>ID</mat-label>
+            <input matInput type="text" [(ngModel)]="model.attendanceConfigurationID" name="attendanceConfigurationID" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" style="flex: 1 1 150px;">
+            <mat-label>Grace Time</mat-label>
+            <input matInput type="number" min="0" [(ngModel)]="model.graceTime" name="graceTime" required>
+          </mat-form-field>
+
+           <!--Lunch Break Start-->
+          <mat-form-field appearance="fill" style="flex: 1 1 150px;">
+            <mat-label>Lunch Break Start (HH:mm:ss)</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="model.lunchBreakStartTime"
+                   name="lunchBreakStartTime"
+                   required
+                   pattern="^([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)$"
+                   #lunchStart="ngModel">
+            <mat-error *ngIf="lunchStart.invalid && (lunchStart.dirty || lunchStart.touched)">
+              Enter time in HH:mm:ss format (e.g., 13:45:30)
+            </mat-error>
+          </mat-form-field>
+
+           <!--Lunch Break End-->
+          <mat-form-field appearance="fill" style="flex: 1 1 150px;">
+            <mat-label>Lunch Break End (HH:mm:ss)</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="model.lunchBreakEndTime"
+                   name="lunchBreakEndTime"
+                   required
+                   pattern="^([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)$"
+                   #lunchEnd="ngModel">
+            <mat-error *ngIf="lunchEnd.invalid && (lunchEnd.dirty || lunchEnd.touched)">
+              Enter time in HH:mm:ss format (e.g., 14:15:00)
+            </mat-error>
+          </mat-form-field>
+
+           <!--Evening Snacks Start-->
+          <mat-form-field appearance="fill" style="flex: 1 1 150px;">
+            <mat-label>Evening Snacks Start (HH:mm:ss)</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="model.eveningSnacksBreakStartTime"
+                   name="eveningSnacksBreakStartTime"
+                   required
+                   pattern="^([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)$"
+                   #snacksStart="ngModel">
+            <mat-error *ngIf="snacksStart.invalid && (snacksStart.dirty || snacksStart.touched)">
+              Enter time in HH:mm:ss format (e.g., 16:30:00)
+            </mat-error>
+          </mat-form-field>
+
+           <!--Evening Snacks End-->
+          <mat-form-field appearance="fill" style="flex: 1 1 150px;">
+            <mat-label>Evening Snacks End (HH:mm:ss)</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="model.eveningSnacksBreakEndTime"
+                   name="eveningSnacksBreakEndTime"
+                   required
+                   pattern="^([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)$"
+                   #snacksEnd="ngModel">
+            <mat-error *ngIf="snacksEnd.invalid && (snacksEnd.dirty || snacksEnd.touched)">
+              Enter time in HH:mm:ss format (e.g., 17:00:00)
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions style="margin-top: 10px;">
+        <button mat-raised-button color="primary" type="submit" >
+          {{ isUpdate() ? 'Update' : 'Create' }}
+        </button>
+        <button mat-stroked-button color="warn" type="button" (click)="reset()">
+          Reset
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+
+  <hr />
+
+   <!--List Table-->
+  <mat-card>
+    <mat-card-content>
+      <table mat-table [dataSource]="configs" class="mat-elevation-z8" style="width: 100%;">
+
+         ID Column
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let config"> {{ config.attendanceConfigurationID }} </td>
+        </ng-container>
+
+         Grace Time Column
+        <ng-container matColumnDef="graceTime">
+          <th mat-header-cell *matHeaderCellDef> Grace Time </th>
+          <td mat-cell *matCellDef="let config"> {{ config.graceTime }} mins </td>
+        </ng-container>
+
+         Lunch Break Column
+        <ng-container matColumnDef="lunchBreak">
+          <th mat-header-cell *matHeaderCellDef> Lunch Break </th>
+          <td mat-cell *matCellDef="let config">
+            {{ config.lunchBreakStartTime }} → {{ config.lunchBreakEndTime }}
+          </td>
+        </ng-container>
+
+         Snacks Break Column
+        <ng-container matColumnDef="snacksBreak">
+          <th mat-header-cell *matHeaderCellDef> Snacks Break </th>
+          <td mat-cell *matCellDef="let config">
+            {{ config.eveningSnacksBreakStartTime }} → {{ config.eveningSnacksBreakEndTime }}
+          </td>
+        </ng-container>
+
+         Actions Column
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let config">
+            <button mat-icon-button color="primary" (click)="edit(config)" aria-label="Edit">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="delete(config.attendanceConfigurationID)" aria-label="Delete">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['id', 'graceTime', 'lunchBreak', 'snacksBreak', 'actions']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['id', 'graceTime', 'lunchBreak', 'snacksBreak', 'actions'];"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

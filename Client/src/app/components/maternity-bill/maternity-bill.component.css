@@ -1,0 +1,76 @@
+mat-card {
+  margin: 20px auto;
+  padding: 24px;
+  max-width: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Title Styling */
+mat-card h2 {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Form Layout */
+.mat-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+/* Form Field Styling */
+mat-form-field {
+  flex: 0 0 calc(25% - 12px); /* 4 columns with spacing */
+  min-width: 200px;
+}
+
+@media (max-width: 1024px) {
+  mat-form-field {
+    width: calc(50% - 10px); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  mat-form-field {
+    width: 100%; /* 1 column on small screens */
+  }
+}
+
+/* Submit Button */
+
+  button[type="submit"] {
+  margin-top: 24px;
+}
+
+/* Table Styling */
+table.mat-elevation-z8 {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell, td.mat-cell {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+th.mat-header-cell {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table.mat-elevation-z8 {
+    font-size: 0.85rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}

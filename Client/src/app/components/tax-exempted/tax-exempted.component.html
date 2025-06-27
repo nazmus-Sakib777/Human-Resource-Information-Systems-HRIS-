@@ -1,0 +1,517 @@
+<mat-card class="mt-4 p-4">
+  <h2 class="text-center text-primary mb-4">Tax Exempted Configuration</h2>
+
+  <form (ngSubmit)="save()" #f="ngForm" class="mb-4">
+    <div class="row g-3">
+      <!-- ID -->
+      <div class="col-md-3">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>ID</mat-label>
+          <input matInput type="text" [(ngModel)]="model.taxExemptedID" name="taxExemptedID" [readonly]="isUpdate()" required />
+        </mat-form-field>
+      </div>
+
+      <!-- Tax Year -->
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Tax Year</mat-label>
+          <input matInput type="number" [(ngModel)]="model.taxYear" name="taxYear" required />
+        </mat-form-field>
+      </div>
+
+      <!-- House Rent -->
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>House Rent</mat-label>
+          <input matInput type="number" [(ngModel)]="model.houseRent" name="houseRent" />
+        </mat-form-field>
+      </div>
+
+      <!-- Medical -->
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Medical</mat-label>
+          <input matInput type="number" [(ngModel)]="model.medical" name="medical" />
+        </mat-form-field>
+      </div>
+
+      <!-- Conveyance -->
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Conveyance</mat-label>
+          <input matInput type="number" [(ngModel)]="model.conveyance" name="conveyance" />
+        </mat-form-field>
+      </div>
+
+      <!-- Yearly Exempted Tax -->
+      <div class="col-md-4">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Exempted Tax</mat-label>
+          <input matInput type="number" [(ngModel)]="model.yearlyExemptedTaxAmount" name="yearlyExemptedTaxAmount" />
+        </mat-form-field>
+      </div>
+
+      <!-- Yearly Special Exempted Tax -->
+      <div class="col-md-4">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Special Exempted Tax</mat-label>
+          <input matInput type="number" [(ngModel)]="model.yearlySpecialExemptedTaxAmount" name="yearlySpecialExemptedTaxAmount" />
+        </mat-form-field>
+      </div>
+
+      <!-- Approval Status -->
+      <div class="col-md-3">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Approval Status</mat-label>
+          <mat-select [(ngModel)]="model.approvalStatus" name="approvalStatus">
+            <mat-option value="Pending">Pending</mat-option>
+            <mat-option value="Approved">Approved</mat-option>
+            <mat-option value="Rejected">Rejected</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- Approved By -->
+      <div class="col-md-3">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Approved By</mat-label>
+          <input matInput type="text" [(ngModel)]="model.approvedBy" name="approvedBy" />
+        </mat-form-field>
+      </div>
+
+      <!-- Approved Date -->
+      <div class="col-md-3">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Approved Date</mat-label>
+          <input matInput type="date" [(ngModel)]="model.approvedDate" name="approvedDate" />
+        </mat-form-field>
+      </div>
+
+      <!-- Employee ID -->
+      <div class="col-md-3">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Employee ID</mat-label>
+          <input matInput type="text" [(ngModel)]="model.employeeID" name="employeeID" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-3">
+      <button mat-raised-button color="primary" type="submit" class="me-2">
+        {{ isUpdate() ? 'Update' : 'Create' }}
+      </button>
+      <button mat-button color="accent" type="button" (click)="reset()">Reset</button>
+    </div>
+  </form>
+</mat-card>
+
+<!-- Table Display -->
+<mat-card class="mt-4 p-4">
+  <table mat-table [dataSource]="taxList" class="mat-elevation-z8 w-100">
+
+    <ng-container matColumnDef="taxExemptedID">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let t"> {{ t.taxExemptedID }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="taxYear">
+      <th mat-header-cell *matHeaderCellDef> Year </th>
+      <td mat-cell *matCellDef="let t"> {{ t.taxYear }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="houseRent">
+      <th mat-header-cell *matHeaderCellDef> House </th>
+      <td mat-cell *matCellDef="let t"> {{ t.houseRent }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="medical">
+      <th mat-header-cell *matHeaderCellDef> Medical </th>
+      <td mat-cell *matCellDef="let t"> {{ t.medical }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="conveyance">
+      <th mat-header-cell *matHeaderCellDef> Conveyance </th>
+      <td mat-cell *matCellDef="let t"> {{ t.conveyance }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yearlyExemptedTaxAmount">
+      <th mat-header-cell *matHeaderCellDef> Tax </th>
+      <td mat-cell *matCellDef="let t"> {{ t.yearlyExemptedTaxAmount }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yearlySpecialExemptedTaxAmount">
+      <th mat-header-cell *matHeaderCellDef> Special </th>
+      <td mat-cell *matCellDef="let t"> {{ t.yearlySpecialExemptedTaxAmount }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="approvalStatus">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let t"> {{ t.approvalStatus }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="approvedBy">
+      <th mat-header-cell *matHeaderCellDef> Approved By </th>
+      <td mat-cell *matCellDef="let t"> {{ t.approvedBy }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="approvedDate">
+      <th mat-header-cell *matHeaderCellDef> Approved Date </th>
+      <td mat-cell *matCellDef="let t"> {{ t.approvedDate | date }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="employeeID">
+      <th mat-header-cell *matHeaderCellDef> Employee ID </th>
+      <td mat-cell *matCellDef="let t"> {{ t.employeeID }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let t">
+        <button mat-icon-button color="primary" (click)="edit(t)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="delete(t.taxExemptedID)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
+
+
+
+
+<!--<mat-card class="mt-4 p-4">
+  <h2 class="text-center text-primary mb-4">Tax Exempted Configuration</h2>
+
+  <form (ngSubmit)="save()" #f="ngForm" class="mb-4">
+    <div class="row g-3">-->
+<!-- ID -->
+<!--<div class="col-md-3">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>ID</mat-label>
+    <input matInput type="text" [(ngModel)]="model.taxExemptedID" name="taxExemptedID" [readonly]="isUpdate()" required />
+  </mat-form-field>
+</div>-->
+<!-- Tax Year -->
+<!--<div class="col-md-2">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Tax Year</mat-label>
+    <input matInput type="number" [(ngModel)]="model.taxYear" name="taxYear" required />
+  </mat-form-field>
+</div>-->
+<!-- House Rent -->
+<!--<div class="col-md-2">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>House Rent</mat-label>
+    <input matInput type="number" [(ngModel)]="model.houseRent" name="houseRent" />
+  </mat-form-field>
+</div>-->
+<!-- Medical -->
+<!--<div class="col-md-2">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Medical</mat-label>
+    <input matInput type="number" [(ngModel)]="model.medical" name="medical" />
+  </mat-form-field>
+</div>-->
+<!-- Conveyance -->
+<!--<div class="col-md-2">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Conveyance</mat-label>
+    <input matInput type="number" [(ngModel)]="model.conveyance" name="conveyance" />
+  </mat-form-field>
+</div>-->
+<!-- Yearly Exempted Tax -->
+<!--<div class="col-md-4">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Exempted Tax</mat-label>
+    <input matInput type="number" [(ngModel)]="model.yearlyExemptedTaxAmount" name="yearlyExemptedTaxAmount" />
+  </mat-form-field>
+</div>-->
+<!-- Yearly Special Exempted Tax -->
+<!--<div class="col-md-4">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Special Exempted Tax</mat-label>
+    <input matInput type="number" [(ngModel)]="model.yearlySpecialExemptedTaxAmount" name="yearlySpecialExemptedTaxAmount" />
+  </mat-form-field>
+</div>-->
+<!-- Approval Status -->
+<!--<div class="col-md-3">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Approval Status</mat-label>
+    <mat-select [(ngModel)]="model.approvalStatus" name="approvalStatus">
+      <mat-option value="Pending">Pending</mat-option>
+      <mat-option value="Approved">Approved</mat-option>
+      <mat-option value="Rejected">Rejected</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>-->
+<!-- Approved By -->
+<!--<div class="col-md-3">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Approved By</mat-label>
+    <input matInput type="text" [(ngModel)]="model.approvedBy" name="approvedBy" />
+  </mat-form-field>
+</div>-->
+<!-- Approved Date -->
+<!--<div class="col-md-3">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Approved Date</mat-label>
+    <input matInput type="date" [(ngModel)]="model.approvedDate" name="approvedDate" />
+  </mat-form-field>
+</div>-->
+<!-- Employee ID -->
+<!--<div class="col-md-3">
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Employee ID</mat-label>
+      <input matInput type="text" [(ngModel)]="model.employeeID" name="employeeID" />
+    </mat-form-field>
+  </div>
+</div>-->
+<!-- Buttons -->
+<!--<div class="mt-3">
+      <button mat-raised-button color="primary" type="submit" class="me-2">
+        {{ isUpdate() ? 'Update' : 'Create' }}
+      </button>
+      <button mat-button color="accent" type="button" (click)="reset()">Reset</button>
+    </div>
+  </form>
+</mat-card>-->
+<!-- Table Display -->
+<!--<mat-card class="mt-4 p-4">
+  <table mat-table [dataSource]="taxList" class="mat-elevation-z8 w-100">
+    <ng-container matColumnDef="taxExemptedID">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let t"> {{ t.taxExemptedID }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="taxYear">
+      <th mat-header-cell *matHeaderCellDef> Year </th>
+      <td mat-cell *matCellDef="let t"> {{ t.taxYear }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="houseRent">
+      <th mat-header-cell *matHeaderCellDef> House </th>
+      <td mat-cell *matCellDef="let t"> {{ t.houseRent }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="medical">
+      <th mat-header-cell *matHeaderCellDef> Medical </th>
+      <td mat-cell *matCellDef="let t"> {{ t.medical }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="conveyance">
+      <th mat-header-cell *matHeaderCellDef> Conveyance </th>
+      <td mat-cell *matCellDef="let t"> {{ t.conveyance }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yearlyExemptedTaxAmount">
+      <th mat-header-cell *matHeaderCellDef> Tax </th>
+      <td mat-cell *matCellDef="let t"> {{ t.yearlyExemptedTaxAmount }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yearlySpecialExemptedTaxAmount">
+      <th mat-header-cell *matHeaderCellDef> Special </th>
+      <td mat-cell *matCellDef="let t"> {{ t.yearlySpecialExemptedTaxAmount }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let t">
+        <button mat-icon-button color="primary" (click)="edit(t)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="delete(t.taxExemptedID)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['taxExemptedID', 'taxYear', 'houseRent', 'medical', 'conveyance', 'yearlyExemptedTaxAmount', 'yearlySpecialExemptedTaxAmount', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['taxExemptedID', 'taxYear', 'houseRent', 'medical', 'conveyance', 'yearlyExemptedTaxAmount', 'yearlySpecialExemptedTaxAmount', 'actions']"></tr>
+  </table>
+</mat-card>-->
+<!--<mat-card class="mt-4 p-4">
+  <h2 class="text-center text-primary mb-4">Tax Exempted Configuration</h2>
+
+  <form (ngSubmit)="save()" #f="ngForm" class="mb-4">
+    <div class="row g-3">
+      <div class="col-md-3">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>ID</mat-label>-->
+<!--<input matInput type="text" [(ngModel)]="model.taxExemptedID" name="taxExemptedID" required />-->
+<!--<input matInput type="text" [(ngModel)]="model.taxExemptedID" name="taxExemptedID" [readonly]="isUpdate()" required />
+
+        </mat-form-field>
+      </div>
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Tax Year</mat-label>
+          <input matInput type="number" [(ngModel)]="model.taxYear" name="taxYear" required />
+        </mat-form-field>
+      </div>
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>House Rent</mat-label>
+          <input matInput type="number" [(ngModel)]="model.houseRent" name="houseRent" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Medical</mat-label>
+          <input matInput type="number" [(ngModel)]="model.medical" name="medical" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-2">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Conveyance</mat-label>
+          <input matInput type="number" [(ngModel)]="model.conveyance" name="conveyance" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Exempted Tax</mat-label>
+          <input matInput type="number" [(ngModel)]="model.yearlyExemptedTaxAmount" name="yearlyExemptedTaxAmount" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Special Exempted Tax</mat-label>
+          <input matInput type="number" [(ngModel)]="model.yearlySpecialExemptedTaxAmount" name="yearlySpecialExemptedTaxAmount" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <button mat-raised-button color="primary" type="submit" class="me-2">
+        {{ isUpdate() ? 'Update' : 'Create' }}
+      </button>
+      <button mat-button color="accent" type="button" (click)="reset()">Reset</button>
+    </div>
+  </form>
+</mat-card>
+
+<mat-card class="mt-4 p-4">
+  <table mat-table [dataSource]="taxList" class="mat-elevation-z8 w-100">-->
+<!-- ID Column -->
+<!--<ng-container matColumnDef="taxExemptedID">
+  <th mat-header-cell *matHeaderCellDef> ID </th>
+  <td mat-cell *matCellDef="let t"> {{ t.taxExemptedID }} </td>
+</ng-container>-->
+<!-- Tax Year Column -->
+<!--<ng-container matColumnDef="taxYear">
+  <th mat-header-cell *matHeaderCellDef> Year </th>
+  <td mat-cell *matCellDef="let t"> {{ t.taxYear }} </td>
+</ng-container>-->
+<!-- House Rent Column -->
+<!--<ng-container matColumnDef="houseRent">
+  <th mat-header-cell *matHeaderCellDef> House </th>
+  <td mat-cell *matCellDef="let t"> {{ t.houseRent }} </td>
+</ng-container>-->
+<!-- Medical Column -->
+<!--<ng-container matColumnDef="medical">
+  <th mat-header-cell *matHeaderCellDef> Medical </th>
+  <td mat-cell *matCellDef="let t"> {{ t.medical }} </td>
+</ng-container>-->
+<!-- Conveyance Column -->
+<!--<ng-container matColumnDef="conveyance">
+  <th mat-header-cell *matHeaderCellDef> Conveyance </th>
+  <td mat-cell *matCellDef="let t"> {{ t.conveyance }} </td>
+</ng-container>-->
+<!-- Tax Amount Column -->
+<!--<ng-container matColumnDef="yearlyExemptedTaxAmount">
+  <th mat-header-cell *matHeaderCellDef> Tax </th>
+  <td mat-cell *matCellDef="let t"> {{ t.yearlyExemptedTaxAmount }} </td>
+</ng-container>-->
+<!-- Special Tax Column -->
+<!--<ng-container matColumnDef="yearlySpecialExemptedTaxAmount">
+  <th mat-header-cell *matHeaderCellDef> Special </th>
+  <td mat-cell *matCellDef="let t"> {{ t.yearlySpecialExemptedTaxAmount }} </td>
+</ng-container>-->
+<!-- Actions Column -->
+<!--<ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let t">
+        <button mat-icon-button color="primary" (click)="edit(t)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="delete(t.taxExemptedID)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['taxExemptedID', 'taxYear', 'houseRent', 'medical', 'conveyance', 'yearlyExemptedTaxAmount', 'yearlySpecialExemptedTaxAmount', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['taxExemptedID', 'taxYear', 'houseRent', 'medical', 'conveyance', 'yearlyExemptedTaxAmount', 'yearlySpecialExemptedTaxAmount', 'actions']"></tr>
+  </table>
+</mat-card>-->
+<!--<div class="container mt-3">
+  <h2>Tax Exempted Configuration</h2>
+
+  <form (ngSubmit)="save()" #f="ngForm" class="mb-4">
+    <div class="row g-2">
+      <div class="col-md-3">
+        <input type="text" [(ngModel)]="model.taxExemptedID" name="taxExemptedID" placeholder="ID" class="form-control" required />
+      </div>
+      <div class="col-md-2">
+        <input type="number" [(ngModel)]="model.taxYear" name="taxYear" placeholder="Tax Year" class="form-control" required />
+      </div>
+      <div class="col-md-2">
+        <input type="number" [(ngModel)]="model.houseRent" name="houseRent" placeholder="House Rent" class="form-control" />
+      </div>
+      <div class="col-md-2">
+        <input type="number" [(ngModel)]="model.medical" name="medical" placeholder="Medical" class="form-control" />
+      </div>
+      <div class="col-md-2">
+        <input type="number" [(ngModel)]="model.conveyance" name="conveyance" placeholder="Conveyance" class="form-control" />
+      </div>
+      <div class="col-md-4">
+        <input type="number" [(ngModel)]="model.yearlyExemptedTaxAmount" name="yearlyExemptedTaxAmount" placeholder="Exempted Tax" class="form-control" />
+      </div>
+      <div class="col-md-4">
+        <input type="number" [(ngModel)]="model.yearlySpecialExemptedTaxAmount" name="yearlySpecialExemptedTaxAmount" placeholder="Special Exempted Tax" class="form-control" />
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <button type="submit" class="btn btn-primary me-2">
+        {{ isUpdate() ? 'Update' : 'Create' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="reset()">Reset</button>
+    </div>
+  </form>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Year</th>
+        <th>House</th>
+        <th>Medical</th>
+        <th>Conveyance</th>
+        <th>Tax</th>
+        <th>Special</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of taxList">
+        <td>{{ t.taxExemptedID }}</td>
+        <td>{{ t.taxYear }}</td>
+        <td>{{ t.houseRent }}</td>
+        <td>{{ t.medical }}</td>
+        <td>{{ t.conveyance }}</td>
+        <td>{{ t.yearlyExemptedTaxAmount }}</td>
+        <td>{{ t.yearlySpecialExemptedTaxAmount }}</td>
+        <td>
+          <button class="btn btn-sm btn-info me-2" (click)="edit(t)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="delete(t.taxExemptedID)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->

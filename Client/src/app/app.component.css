@@ -1,0 +1,89 @@
+
+
+
+/* Glassmorphic Toolbar */
+.glass-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ensures it stays above other content */
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  row-gap: 8px;
+  background: 	rgba(24, 49, 83, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* You may also use 'position: fixed;' instead of 'sticky' if desired:
+   - Use fixed if you want it to always stay there no matter what container scrolls.
+   - But 'sticky' is more fluid and works better with scrollable content below.
+*/
+
+/* Spacer to push nav items to the right */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Navigation buttons and dropdown triggers */
+.glass-toolbar button[mat-button] {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #efeff1;
+  font-weight: 500;
+  text-transform: none;
+  padding: 8px 12px;
+}
+
+/* Hover and focus styles for buttons */
+.glass-toolbar button[mat-button]:hover,
+.glass-toolbar button[mat-button]:focus {
+  background-color: rgba(242, 242, 243, 0.356); 
+  border-radius: 4px;
+}
+
+/* rgba(192, 171, 171, 0.356) */
+/* Active router link button */
+/* .glass-toolbar .active {
+  background-color: rgba(33, 31, 182, 0.842);
+  border-radius: 4px;
+} */
+
+/* Menu item styling inside mat-menu */
+.mat-menu-item {
+  font-weight: 500;
+  color: #1e1e2f;
+  display: flex;
+  align-items: center;
+}
+
+/* Icon alignment inside mat-menu items */
+.mat-menu-item mat-icon {
+  margin-right: 8px;
+}
+
+/* Grouping buttons together if needed */
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Responsive: make nav scrollable on small screens */
+@media (max-width: 768px) {
+  .glass-toolbar {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+.main-content {
+  padding-top: 70px; /* slightly more than toolbar height */
+}
+

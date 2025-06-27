@@ -1,0 +1,11 @@
+.mat-form-field {
+  border-radius: 8px;
+}
+
+.mat-card {
+  border-radius: 16px;
+}
+
+button mat-icon {
+  vertical-align: middle;
+}

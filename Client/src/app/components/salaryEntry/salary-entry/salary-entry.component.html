@@ -1,0 +1,58 @@
+<div class="container mt-4">
+  <h2>Salary Entry Management</h2>
+
+  <form (submit)="onSubmit()" class="mb-3">
+    <div class="row mb-2">
+      <div class="col">
+        <input type="text" [(ngModel)]="salaryEntryForm.salaryEntryID" name="salaryEntryID" class="form-control" placeholder="Entry ID" required>
+      </div>
+      <div class="col">
+        <input type="date" [(ngModel)]="salaryEntryForm.applyDate" name="applyDate" class="form-control" placeholder="Apply Date" required>
+      </div>
+      <div class="col">
+        <input type="text" [(ngModel)]="salaryEntryForm.salaryHeadName" name="salaryHeadName" class="form-control" placeholder="Salary Head" required>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col">
+        <input type="number" [(ngModel)]="salaryEntryForm.amount" name="amount" class="form-control" placeholder="Amount" required>
+      </div>
+      <div class="col">
+        <input type="text" [(ngModel)]="salaryEntryForm.employeeID" name="employeeID" class="form-control" placeholder="Employee ID" required>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" type="submit">
+          {{ isEdit ? 'Update' : 'Add' }}
+        </button>
+        <button class="btn btn-secondary ms-2" type="button" (click)="resetForm()">Clear</button>
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Entry ID</th>
+        <th>Apply Date</th>
+        <th>Salary Head</th>
+        <th>Amount</th>
+        <th>Employee ID</th>
+        <th style="width: 150px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of salaryEntry">
+        <td>{{ item.salaryEntryID }}</td>
+        <td>{{ item.applyDate }}</td>
+        <td>{{ item.salaryHeadName }}</td>
+        <td>{{ item.amount }}</td>
+        <td>{{ item.employeeID }}</td>
+        <td>
+          <button class="btn btn-sm btn-info me-2" (click)="editItem(item)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteItem(item.salaryEntryID)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

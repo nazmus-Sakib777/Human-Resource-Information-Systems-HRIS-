@@ -1,0 +1,248 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <mat-card class="mat-elevation-z6 p-4">
+    <mat-card-title class="text-primary text-center mb-4">
+      <mat-icon class="me-1">receipt_long</mat-icon> Tax Entry Form
+    </mat-card-title>
+
+    <div class="row g-3">
+
+      <!-- Tax Amount ID -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Tax Amount ID</mat-label>
+          <mat-icon matPrefix>badge</mat-icon>
+          <input matInput [(ngModel)]="model.taxAmountID" name="taxAmountID">
+        </mat-form-field>
+      </div>
+
+      <!-- Tax Year -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Tax Year</mat-label>
+          <mat-icon matPrefix>calendar_today</mat-icon>
+          <input matInput type="number" [(ngModel)]="model.taxYear" name="taxYear" required>
+        </mat-form-field>
+      </div>
+
+      <!-- Tax Amount Value -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Tax Amount</mat-label>
+          <mat-icon matPrefix>attach_money</mat-icon>
+          <input matInput type="number" [(ngModel)]="model.taxAmountValue" name="taxAmountValue" required>
+        </mat-form-field>
+      </div>
+
+      <!-- Tax Type -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Tax Type</mat-label>
+          <mat-icon matPrefix>category</mat-icon>
+          <mat-select [(ngModel)]="model.taxType" name="taxType" required>
+            <mat-option value="Income">Income</mat-option>
+            <mat-option value="Property">Property</mat-option>
+            <mat-option value="Sales">Sales</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- Status -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Status</mat-label>
+          <mat-icon matPrefix>flag</mat-icon>
+          <mat-select [(ngModel)]="model.status" name="status" required>
+            <mat-option value="Pending">Pending</mat-option>
+            <mat-option value="Approved">Approved</mat-option>
+            <mat-option value="Rejected">Rejected</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- Approved Date -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Approved Date</mat-label>
+          <mat-icon matPrefix>event</mat-icon>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="model.approvedDate" name="approvedDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <!-- Remarks -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Remarks</mat-label>
+          <mat-icon matPrefix>notes</mat-icon>
+          <textarea matInput rows="3" [(ngModel)]="model.remarks" name="remarks"></textarea>
+        </mat-form-field>
+      </div>
+
+      <!-- Entry User -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Entry User</mat-label>
+          <mat-icon matPrefix>person</mat-icon>
+          <input matInput [(ngModel)]="model.entryUser" name="entryUser">
+        </mat-form-field>
+      </div>
+
+      <!-- Employee ID -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Employee ID</mat-label>
+          <mat-icon matPrefix>badge</mat-icon>
+          <input matInput [(ngModel)]="model.employeeID" name="employeeID">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button mat-raised-button color="primary" type="submit">
+        <mat-icon class="me-1">save</mat-icon> Save
+      </button>
+    </div>
+  </mat-card>
+</form>
+
+
+
+
+<!--<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="row">-->
+<!-- Tax Amount ID -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Tax Amount ID</mat-label>
+    <input matInput [(ngModel)]="model.taxAmountID" name="taxAmountID">
+  </mat-form-field>
+</div>-->
+<!-- Tax Year -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Tax Year</mat-label>
+    <input matInput type="number" [(ngModel)]="model.taxYear" name="taxYear" required>
+  </mat-form-field>
+</div>-->
+<!-- Tax Amount Value -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Tax Amount</mat-label>
+    <input matInput type="number" [(ngModel)]="model.taxAmountValue" name="taxAmountValue" required>
+  </mat-form-field>
+</div>-->
+<!-- Tax Type -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Tax Type</mat-label>
+    <mat-select [(ngModel)]="model.taxType" name="taxType">
+      <mat-option value="Income">Income</mat-option>
+      <mat-option value="Property">Property</mat-option>
+      <mat-option value="Sales">Sales</mat-option>
+      <mat-option value="Other">Other</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>-->
+<!-- Status -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Status</mat-label>
+    <mat-select [(ngModel)]="model.status" name="status">
+      <mat-option value="Pending">Pending</mat-option>
+      <mat-option value="Approved">Approved</mat-option>
+      <mat-option value="Rejected">Rejected</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>-->
+<!-- Approved Date -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Approved Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="model.approvedDate" name="approvedDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>-->
+<!-- Remarks -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Remarks</mat-label>
+    <textarea matInput [(ngModel)]="model.remarks" name="remarks"></textarea>
+  </mat-form-field>
+</div>-->
+<!-- Entry User -->
+<!--<div class="col-md-6">
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Entry User</mat-label>
+    <input matInput [(ngModel)]="model.entryUser" name="entryUser">
+  </mat-form-field>
+</div>-->
+<!-- Employee ID -->
+<!--<div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Employee ID</mat-label>
+        <input matInput [(ngModel)]="model.employeeID" name="employeeID">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit" class="mt-3">Save</button>
+</form>-->
+<!--<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="row">
+    <div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Tax Year</mat-label>
+        <input matInput type="number" [(ngModel)]="model.taxYear" name="taxYear" required>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Tax Amount</mat-label>
+        <input matInput type="number" [(ngModel)]="model.taxAmountValue" name="taxAmountValue">
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Tax Type</mat-label>
+        <input matInput [(ngModel)]="model.taxType" name="taxType">
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Status</mat-label>
+        <input matInput [(ngModel)]="model.status" name="status">
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Approved Date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="model.approvedDate" name="approvedDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Remarks</mat-label>
+        <textarea matInput [(ngModel)]="model.remarks" name="remarks"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-6">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Employee ID</mat-label>
+        <input matInput [(ngModel)]="model.employeeID" name="employeeID">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit" class="mt-3">Save</button>
+</form>-->

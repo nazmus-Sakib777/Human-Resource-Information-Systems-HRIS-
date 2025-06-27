@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Leave Encashment Details</h2>
+<mat-dialog-content>
+  <table>
+    <tr><td><strong>Employee ID:</strong></td><td>{{ data.employeeID }}</td></tr>
+    <tr><td><strong>Encash Month:</strong></td><td>{{ data.encashMonth }}</td></tr>
+    <tr><td><strong>Encash Year:</strong></td><td>{{ data.encashYear }}</td></tr>
+    <tr><td><strong>Basic Salary:</strong></td><td>{{ data.basicSalary }}</td></tr>
+    <tr><td><strong>Leave Encash Amount:</strong></td><td>{{ data.leaveEncashAmount }}</td></tr>
+    <tr><td><strong>Approved Date:</strong></td><td>{{ data.approvedDate }}</td></tr>
+    <!-- Add other fields as needed -->
+  </table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

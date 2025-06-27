@@ -1,0 +1,11 @@
+mat-card {
+  padding: 16px;
+}
+
+mat-table {
+  width: 100%;
+}
+
+button[mat-icon-button] {
+  margin: 0 4px;
+}

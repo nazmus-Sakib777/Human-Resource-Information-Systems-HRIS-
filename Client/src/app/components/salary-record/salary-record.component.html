@@ -1,0 +1,339 @@
+<div class="container mt-4" >
+  <h2>Salary Record Management</h2>
+
+  <form (submit)="onSubmit()" class="mb-3">
+    <!-- Row 1 -->
+    <div class="row mb-2">
+      <div class="col">
+        <label >Salary RecordID</label>
+        <input type="text" [(ngModel)]="Form.salaryRecordID" name="salaryRecordID" class="form-control" required />
+      </div>
+      <div class="col">
+        <label >Salary Start Date</label>
+        <input type="date" [(ngModel)]="Form.salaryStartDate" name="salaryStartDate" class="form-control" placeholder="Start Date" required />
+      </div>
+      <div class="col">
+        <label >Salary End Date</label>
+        <input type="date" [(ngModel)]="Form.salaryEndDate" name="salaryEndDate" class="form-control" placeholder="End Date" required />
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row mb-2">
+      <div class="col">
+        <label >Joining Date</label>
+        <input type="date" [(ngModel)]="Form.joiningDate" name="joiningDate" class="form-control" placeholder="Joining Date" />
+      </div>
+      <div class="col">
+        <label>Month Days</label>
+        <input type="number" [(ngModel)]="Form.monthDays" name="monthDays" class="form-control" placeholder="Month Days" />
+      </div>
+      <div class="col">
+        <label>Punch Days</label>
+        <input type="number" [(ngModel)]="Form.punchDays" name="punchDays" class="form-control" placeholder="Punch Days" />
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row mb-2">
+      <div class="col">
+        <label>Total Days</label>
+        <input type="number" [(ngModel)]="Form.totalHoliDay" name="totalHoliDay" class="form-control" placeholder="Total Holiday" />
+      </div>
+      <div class="col">
+        <label>Total Leave</label>
+        <input type="number" [(ngModel)]="Form.totalLeave" name="totalLeave" class="form-control" placeholder="Total Leave" />
+      </div>
+      <div class="col">
+        <label>Working Days</label>
+        <input type="number" [(ngModel)]="Form.workingDays" name="workingDays" class="form-control" placeholder="Working Days" />
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="row mb-2">
+      <div class="col">
+        <label>Absenteeism</label>
+        <input type="number" [(ngModel)]="Form.absenteeism" name="absenteeism" class="form-control" placeholder="Absenteeism" />
+      </div>
+      <div class="col">
+        <label>Gross Salary</label>
+        <input type="number" [(ngModel)]="Form.gross" name="gross" class="form-control" placeholder="Gross Salary" />
+      </div>
+      <div class="col">
+        <label>Actual Gross</label>
+        <input type="number" [(ngModel)]="Form.actualGross" name="actualGross" class="form-control" placeholder="Actual Gross" />
+      </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Basic Salary</label>
+        <input type="number" [(ngModel)]="Form.basic" name="basic" class="form-control" placeholder="Basic Salary" />
+      </div>
+      <div class="col">
+            <label>House Rent</label>
+        <input type="number" [(ngModel)]="Form.houseRent" name="houseRent" class="form-control" placeholder="House Rent" />
+      </div>
+      <div class="col">
+            <label>Medical Allowance</label>
+        <input type="number" [(ngModel)]="Form.medicalAllowance" name="medicalAllowance" class="form-control" placeholder="Medical Allowance" />
+      </div>
+    </div>
+
+    <!-- Row 6 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Mobile Allowance</label>
+        <input type="number" [(ngModel)]="Form.mobileAllowance" name="mobileAllowance" class="form-control" placeholder="Mobile Allowance" />
+      </div>
+      <div class="col">
+            <label>Other Allowance</label>
+        <input type="number" [(ngModel)]="Form.otherAllowances" name="otherAllowances" class="form-control" placeholder="Other Allowances" />
+      </div>
+      <div class="col">
+            <label>Lunch Allowanc</label>
+        <input type="number" [(ngModel)]="Form.lunchAllowance" name="lunchAllowance" class="form-control" placeholder="Lunch Allowance" />
+      </div>
+    </div>
+
+    <!-- Row 7 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>WorkingDays</label>
+        <input type="number" [(ngModel)]="Form.tax" name="tax" class="form-control" placeholder="Tax" />
+      </div>
+      <div class="col">
+        <label>Tax</label>
+        <input type="number" [(ngModel)]="Form.otherDeduction" name="otherDeduction" class="form-control" placeholder="Other Deduction" />
+      </div>
+      <div class="col">
+            <label>OT Hours</label>
+        <input type="number" [(ngModel)]="Form.otHours" name="otHours" class="form-control" placeholder="OT Hours" />
+      </div>
+    </div>
+
+    <!-- Row 8 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>OT Amount</label>
+        <input type="number" [(ngModel)]="Form.otAmount" name="otAmount" class="form-control" placeholder="OT Amount" />
+      </div>
+      <div class="col">
+            <label>By Bank Amount</label>
+        <input type="number" [(ngModel)]="Form.byBankAmount" name="byBankAmount" class="form-control" placeholder="By Bank Amount" />
+      </div>
+      <div class="col">
+            <label>By Cash Amoun</label>
+        <input type="number" [(ngModel)]="Form.byCashAmount" name="byCashAmount" class="form-control" placeholder="By Cash Amount" />
+      </div>
+    </div>
+
+    <!-- Row 9 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Net Payable</label>
+        <input type="number" [(ngModel)]="Form.netPayable" name="netPayable" class="form-control" placeholder="Net Payable" />
+      </div>
+      <div class="col">
+            <label>Conveyance Allowance</label>
+        <input type="number" [(ngModel)]="Form.conveyanceAllowance" name="conveyanceAllowance" class="form-control" placeholder="Conveyance Allowance" />
+      </div>
+      <div class="col">
+            <label>Attendance Bonus</label>
+        <input type="number" [(ngModel)]="Form.attendanceBonus" name="attendanceBonus" class="form-control" placeholder="Attendance Bonus" />
+      </div>
+    </div>
+
+    <!-- Row 10 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Special Allowance</label>
+        <input type="number" [(ngModel)]="Form.specialAllowance" name="specialAllowance" class="form-control" placeholder="Special Allowance" />
+      </div>
+      <div class="col">
+            <label>Salary Advance</label>
+        <input type="number" [(ngModel)]="Form.salaryAdvance" name="salaryAdvance" class="form-control" placeholder="Salary Advance" />
+      </div>
+      <div class="col">
+            <label>Food Charge</label>
+        <input type="number" [(ngModel)]="Form.foodCharge" name="foodCharge" class="form-control" placeholder="Food Charge" />
+      </div>
+    </div>
+
+    <!-- Row 11 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>OT Rate</label>
+        <input type="number" [(ngModel)]="Form.otRate" name="otRate" class="form-control" placeholder="OT Rate" />
+      </div>
+      <div class="col">
+            <label>Tiffin Allowance</label>
+        <input type="number" [(ngModel)]="Form.tiffinAllowance" name="tiffinAllowance" class="form-control" placeholder="Tiffin Allowance" />
+      </div>
+      <div class="col">
+            <label>Arrear</label>
+        <input type="number" [(ngModel)]="Form.arrear" name="arrear" class="form-control" placeholder="Arrear" />
+      </div>
+    </div>
+
+    <!-- Row 12 -->
+    <div class="row mb-2">
+
+      <div class="col">
+                    <label>Special Bonus</label>
+        <input type="number" [(ngModel)]="Form.specialBonus" name="specialBonus" class="form-control" placeholder="Special Bonus" />
+      </div>
+      <div class="col">
+            <label>Leave Status</label>
+        <input type="text" [(ngModel)]="Form.leaveStatus" name="leaveStatus" class="form-control"  />
+      </div>
+      <div class="col">
+            <label>Holiday Bill Amount</label>
+        <input type="number" [(ngModel)]="Form.holiDayBillAmount" name="holiDayBillAmount" class="form-control" placeholder="Holiday Bill Amount" />
+      </div>
+    </div>
+
+    <!-- Row 13 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Night Bill Amount</label>
+        <input type="number" [(ngModel)]="Form.nightBillAmount" name="nightBillAmount" class="form-control" placeholder="Night Bill Amount" />
+      </div>
+      <div class="col">
+            <label>Salary I</label>
+        <input type="number" [(ngModel)]="Form.salaryID" name="salaryID" class="form-control" placeholder="Salary ID" />
+      </div>
+      <div class="col">
+            <label>Lunch Bill Amount</label>
+        <input type="number" [(ngModel)]="Form.lunchBillAmount" name="lunchBillAmount" class="form-control" placeholder="Lunch Bill Amount" />
+      </div>
+    </div>
+
+    <!-- Row 14 -->
+    <div class="row mb-2">
+      <div class="col">
+        <div class="form-check">
+          <input type="checkbox" [(ngModel)]="Form.mobileBanking" name="mobileBanking" class="form-check-input" id="mobileBanking" />
+          <label class="form-check-label" for="mobileBanking">Mobile Banking</label>
+        </div>
+      </div>
+      <div class="col">
+            <label>Account Number</label>
+        <input type="text" [(ngModel)]="Form.accountNumber" name="accountNumber" class="form-control"  />
+      </div>
+      <div class="col">
+            <label>Bank Name</label>
+        <input type="text" [(ngModel)]="Form.bankName" name="bankName" class="form-control"  />
+      </div>
+    </div>
+
+    <!-- Row 15 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Process Date</label>
+        <input type="date" [(ngModel)]="Form.processDate" name="processDate" class="form-control" placeholder="Process Date" />
+      </div>
+      <div class="col">
+            <label>Unit ID</label>
+        <input type="text" [(ngModel)]="Form.unitID" name="unitID" class="form-control"  />
+      </div>
+      <div class="col">
+            <label>Section ID</label>
+        <input type="text" [(ngModel)]="Form.sectionID" name="sectionID" class="form-control"  />
+      </div>
+    </div>
+
+    <!-- Row 16 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Employment Type ID</label>
+        <input type="text" [(ngModel)]="Form.employmentTypeID" name="employmentTypeID" class="form-control"  />
+      </div>
+      <div class="col">
+            <label>Salary Grade ID</label>
+        <input type="text" [(ngModel)]="Form.salaryGradeID" name="salaryGradeID" class="form-control"  />
+      </div>
+      <div class="col">
+            <label>Company ID</label>
+        <input type="text" [(ngModel)]="Form.companyID" name="companyID" class="form-control" />
+      </div>
+    </div>
+
+    <!-- Row 17 -->
+    <div class="row mb-2">
+      <div class="col">
+            <label>Department ID</label>
+        <input type="text" [(ngModel)]="Form.departmentID" name="departmentID" class="form-control"  />
+      </div>
+      <div class="col">
+            <label>Designation ID</label>
+        <input type="text" [(ngModel)]="Form.designationID" name="designationID" class="form-control"  />
+      </div>
+      <div class="col">
+            <label>Grade ID</label>
+        <input type="text" [(ngModel)]="Form.gradeID" name="gradeID" class="form-control"  />
+      </div>
+    </div>
+
+    <!-- Submit and Clear Buttons -->
+    <div class="row mt-3">
+      <div class="col">
+        <button class="btn btn-primary" type="submit">
+          {{ isEdit ? 'Update' : 'Add' }}
+        </button>
+        <button class="btn btn-secondary ms-2" type="button" (click)="resetForm()">Clear</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Table displaying data -->
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark" style="white-space:nowrap; font-size: 12px;">
+      <tr>
+        <th>ID</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Joining Date</th>
+        <th>Month Days</th>
+        <th>Punch Days</th>
+        <th>Total Holiday</th>
+        <th>Total Leave</th>
+        <th>Working Days</th>
+        <th>Gross</th>
+        <th>Basic</th>
+        <th>House Rent</th>
+        <th>Net Payable</th>
+        <th>M Banking</th>
+        <th>AC Number</th>
+        <th>B Name</th>
+        <th style="width: 150px;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of salaryRecord">
+        <td>{{ record.salaryRecordID }}</td>
+        <td>{{ record.salaryStartDate }}</td>
+        <td>{{ record.salaryEndDate }}</td>
+        <td>{{ record.joiningDate }}</td>
+        <td>{{ record.monthDays }}</td>
+        <td>{{ record.punchDays }}</td>
+        <td>{{ record.totalHoliDay }}</td>
+        <td>{{ record.totalLeave }}</td>
+        <td>{{ record.workingDays }}</td>
+        <td>{{ record.gross }}</td>
+        <td>{{ record.basic }}</td>
+        <td>{{ record.houseRent }}</td>
+        <td>{{ record.netPayable }}</td>
+        <td>{{ record.mobileBanking ? 'Yes' : 'No' }}</td>
+        <td>{{ record.accountNumber }}</td>
+        <td>{{ record.bankName }}</td>
+        <td>
+          <button class="btn btn-sm btn-info me-2" (click)="editItem(record)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteItem(record.salaryRecordID!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
